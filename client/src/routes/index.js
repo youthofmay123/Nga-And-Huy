@@ -7,6 +7,8 @@ import Diem from '~/pages/Diem';
 import ELOsPIs from '~/pages/ELOsPIs';
 import GiangVien from '~/pages/GiangVien';
 import LopHocPhan from '~/pages/LopHocPhan';
+import ChuanDauRa from '~/pages/ChuanDauRa';
+import BoMon from '~/pages/BoMon';
 
 //public routes
 const publicRoutes = [
@@ -19,6 +21,8 @@ const publicRoutes = [
     { path: '/elospis', component: ELOsPIs },
     { path: '/giangvien', component: GiangVien },
     { path: '/lophocphan', component: LopHocPhan },
+    { path: '/chuandaura', component: ChuanDauRa },
+    { path: '/bomon', component: BoMon },
 ];
 
 const privateRoutes = [];

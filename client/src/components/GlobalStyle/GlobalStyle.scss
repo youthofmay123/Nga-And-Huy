@@ -11,6 +11,9 @@
 
 html {
     font-size: 62.5%;
+    max-width: 1600px;
+    max-height: 750px;
+    background-color: azure;
 }
 
 body {
@@ -23,9 +26,9 @@ body {
 .container-component {
     display: flex;
     flex-wrap: nowrap;
-    height: 600px;
+    height: 650px;
 }
 .content {
-    width: 80%;
+    width: 82%;
     background-color: blanchedalmond;
 }

@@ -11,7 +11,7 @@ function Header() {
                         className="logo-iuh"
                         src={Logo_IUH}
                         alt="logo iuh"
-                        style={{ width: '110px', height: '60px', padding: '10px 5px' }}
+                        style={{ width: '155px', height: '78px', padding: '10px 5px', margin: '0' }}
                     />
                 </Link>
                 <div className="container">

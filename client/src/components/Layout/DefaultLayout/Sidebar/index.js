@@ -14,37 +14,11 @@ function Sidebar() {
             <div className="list" style={{ width: '240px', 'margin-top': '8px', 'margin-left': '8px' }}>
                 <div className="list-group" style={{ left: '5px', width: '200px' }}>
                     <div className="list-group-space">
-                        <Link to="/lophocphan">
-                            <a
-                                href="#componentsSubMenu"
-                                className="list-group-item list-group-item-action"
-                                data-toggle="collapse"
-                                aria-expanded="false"
-                            >
-                                <img src={icon01} alt="icon-01" className="icon" style={{ 'margin-right': '10px' }} />
-                                LỚP HỌC PHẦN
-                                <img
-                                    src={icon07}
-                                    alt="icon-07"
-                                    className="icon"
-                                    style={{ 'margin-right': '10px', 'margin-left': '10px' }}
-                                />
-                            </a>
+                        <Link to="/lophocphan" className="list-group-item list-group-item-action">
+                            <img src={icon01} alt="icon-01" className="icon" style={{ 'margin-right': '10px' }} />
+                            LỚP HỌC PHẦN
                         </Link>
-                        <div className="collapse" id="componentsSubMenu">
-                            <Link
-                                to="/danhsachsinhvien"
-                                className="list-group-item list-group-item-action collapse-item"
-                            >
-                                Danh sách sinh viên
-                            </Link>
-                            <Link to="/diem" className="list-group-item list-group-item-action collapse-item">
-                                Điểm
-                            </Link>
-                            <Link to="/baocao" className="list-group-item list-group-item-action collapse-item">
-                                Báo cáo
-                            </Link>
-                        </div>
+
                         <Link to="/banganhxa" className="list-group-item list-group-item-action">
                             <img src={icon02} alt="icon-02" className="icon" style={{ 'margin-right': '10px' }} />
                             BẢNG ÁNH XẠ
@@ -64,6 +38,14 @@ function Sidebar() {
                         <Link to="/giangvien" className="list-group-item list-group-item-action">
                             <img src={icon05} alt="icon-05" className="icon" style={{ 'margin-right': '10px' }} />
                             GIẢNG VIÊN
+                        </Link>
+                        <Link to="/chuandaura" className="list-group-item list-group-item-action">
+                            <img src={icon05} alt="icon-05" className="icon" style={{ 'margin-right': '10px' }} />
+                            CHUẨN ĐẦU RA
+                        </Link>
+                        <Link to="/bomon" className="list-group-item list-group-item-action">
+                            <img src={icon05} alt="icon-05" className="icon" style={{ 'margin-right': '10px' }} />
+                            BỘ MÔN
                         </Link>
                     </div>
                 </div>
