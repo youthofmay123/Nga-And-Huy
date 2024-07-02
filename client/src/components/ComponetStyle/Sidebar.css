@@ -1,0 +1,19 @@
+.sidebar {
+    left: 5px;
+    width: 230px;
+    display: inline-block;
+}
+
+.list-group-item {
+    font-size: 12px;
+    width: 200px;
+    padding: 10px;
+}
+
+.list-group-item-action:hover {
+    color: #fff;
+    background-color: #4880ff;
+}
+.collapse-item {
+    padding-left: 25px;
+}
