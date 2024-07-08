@@ -1,0 +1,40 @@
+.wrapper {
+    --search-border-radius: 92px;
+    --search-height: 46px;
+    --search-top-spacer: 9px;
+    --search-button-width: 52px;
+    position: relative;
+    min-width: 900px;
+}
+// .logo {
+// width: 230px;
+// display: flex;
+// align-items: center;
+// justify-content: center;
+// }
+.logo-iuh {
+    width: 155px;
+    height: 65px;
+}
+.user-avatar {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin-right: 5px;
+}
+.active {
+    display: flex;
+}
+.name,
+.role {
+    margin: 0;
+}
+.name-role {
+    padding: 0px 10px;
+}
+.name {
+    font-size: 1.4rem;
+}
+.role {
+    font-size: 1.2rem;
+}
