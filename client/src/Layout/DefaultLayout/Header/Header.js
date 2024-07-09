@@ -8,6 +8,7 @@ import styles from './Header.module.scss';
 import config from '~/config';
 //componet
 import Search from '~/components/Search';
+import Image from '~/components/Image';
 
 function Header() {
     const cx = classNames.bind(styles);
@@ -37,7 +38,7 @@ function Header() {
                                     style={{ display: 'flex', alignItems: 'center' }}
                                 >
                                     <div className={cx('active')}>
-                                        <img src={avatar} alt="" className={cx('user-avatar')} />
+                                        <Image src={avatar} alt="" className={cx('user-avatar')} />
                                         <div className={cx('name-role')}>
                                             <strong className={cx('name')}>Huy Nguyễn</strong>
                                             <p className={cx('role')}>Giảng viên</p>

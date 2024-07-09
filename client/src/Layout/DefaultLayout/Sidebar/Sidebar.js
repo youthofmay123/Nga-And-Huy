@@ -1,11 +1,3 @@
-import icon01 from '~/IMG/icon-01.png';
-import icon02 from '~/IMG/icon-02.png';
-import icon03 from '~/IMG/icon-03.png';
-import icon04 from '~/IMG/icon-04.png';
-import icon05 from '~/IMG/icon-05.png';
-import icon06 from '~/IMG/icon-06.png';
-import '~/components/ComponetStyle/Sidebar.css';
-
 //libs
 import classNames from 'classnames/bind';
 import styles from './Sidebar.module.scss';

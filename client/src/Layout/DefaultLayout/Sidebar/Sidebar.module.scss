@@ -1,11 +1,11 @@
 .sidebar {
+    width: 230px;
     position: relative;
 }
 .list-group {
     left: 5px;
     width: 200px;
     margin-top: 28px;
-    padding: 6px;
 }
 .list {
     width: 240px;
@@ -16,9 +16,10 @@
 .list-group-item-action {
     position: relative;
     margin-top: 0;
-    padding: 15px;
+    padding: 12px;
     font-size: 1.2rem;
     border-radius: 4px;
+    border: none;
     color: var(--text-color);
     transition: background-color ease-in-out 200ms;
 
@@ -29,8 +30,8 @@
             content: '';
             position: absolute;
             bottom: 0;
-            left: -14px;
-            width: 5px;
+            left: -12px;
+            width: 4px;
             height: 100%;
             border-top-right-radius: 3px;
             border-bottom-right-radius: 3px;

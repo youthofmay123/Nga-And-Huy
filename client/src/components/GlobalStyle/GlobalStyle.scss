@@ -9,7 +9,8 @@
 
     //default layout
     --default-layout-header-height: 60px;
-    --default-layout-width: 1150px;
+    --default-layout-width: 1270px;
+    --default-layout-height: 650px;
     --default-layout-horizontal-spacer: 24px;
 }
 
@@ -21,19 +22,19 @@
 
 html {
     font-size: 62.5%;
-    max-width: 1600px;
-    max-height: 750px;
     background-color: azure;
 }
 
 body {
     // font-family: 'Montserrat', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     color: var(--text-color);
     overflow-y: overlay;
+    display: flex;
+    justify-content: center;
 }
 // Srollbar CSS
 html *::-webkit-scrollbar {
@@ -89,9 +90,9 @@ body {
 .container-component {
     display: flex;
     flex-wrap: nowrap;
-    height: 650px;
 }
 .content {
-    width: 82%;
+    width: var(--default-layout-width);
+    height: var(--default-layout-height);
     background-color: blanchedalmond;
 }
