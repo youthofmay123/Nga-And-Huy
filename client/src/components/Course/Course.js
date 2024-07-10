@@ -10,7 +10,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 function Course() {
     const cx = classNames.bind(styles);
     return (
-        <div class={cx('card')}>
+        <div className={cx('card')}>
             <Image className={cx('card-img-top')} src={Frame01} alt="Card image cap" />
             <div className={cx('card-body')}>
                 <div className={cx('course-name')}>

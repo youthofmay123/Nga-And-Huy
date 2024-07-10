@@ -2,12 +2,13 @@
 import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFilter, faRotateLeft } from '@fortawesome/free-solid-svg-icons';
+import { faFileImport, faFilter, faPlus, faRotateLeft } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 //component
+import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
-function Header_Content({ name, state1, state2, state3 }) {
+function Header_Content({ name, state1, state2, state3, btnAdd, btnImport, onClickWhenAdd, onClickWhenImport }) {
     return (
         <div className={cx('header')}>
             <h1 className={cx('name-page')}>
@@ -47,6 +48,23 @@ function Header_Content({ name, state1, state2, state3 }) {
                         Reset Filter
                     </div>
                 </div>
+                <div className={cx('action')}>
+                    {btnAdd && (
+                        <Button primary small leftIcon={<FontAwesomeIcon icon={faPlus} />} onClick={onClickWhenAdd}>
+                            THÊM
+                        </Button>
+                    )}
+                    {btnImport && (
+                        <Button
+                            primary
+                            small
+                            leftIcon={<FontAwesomeIcon icon={faFileImport} />}
+                            onClick={onClickWhenImport}
+                        >
+                            IMPORT
+                        </Button>
+                    )}
+                </div>
             </div>
         </div>
     );
@@ -56,5 +74,7 @@ Header_Content.protoTypes = {
     state1: PropTypes.string,
     state2: PropTypes.string,
     state3: PropTypes.string,
+    btnAdd: PropTypes.node,
+    btnImport: PropTypes.node,
 };
 export default Header_Content;

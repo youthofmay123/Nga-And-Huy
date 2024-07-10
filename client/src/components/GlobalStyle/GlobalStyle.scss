@@ -22,7 +22,6 @@
 
 html {
     font-size: 62.5%;
-    background-color: azure;
 }
 
 body {
@@ -85,14 +84,4 @@ body {
     .tippy-box[data-placement^='bottom'] > .tippy-arrow::before {
         top: -8px;
     }
-}
-
-.container-component {
-    display: flex;
-    flex-wrap: nowrap;
-}
-.content {
-    width: var(--default-layout-width);
-    height: var(--default-layout-height);
-    background-color: blanchedalmond;
 }

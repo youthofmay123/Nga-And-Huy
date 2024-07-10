@@ -1,7 +1,10 @@
 .courses {
     display: flex;
     justify-content: flex-start;
+    height: 510px;
+    overflow-y: auto;
 }
 .container {
     margin: 10px;
+    // height: 510px;
 }

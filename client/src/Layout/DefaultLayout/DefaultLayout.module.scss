@@ -1,2 +1,14 @@
 .wrapper {
 }
+.content {
+    // overflow-y: auto;
+}
+.container-component {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.content {
+    width: var(--default-layout-width);
+    height: var(--default-layout-height);
+    background-color: #f5f6fa;
+}

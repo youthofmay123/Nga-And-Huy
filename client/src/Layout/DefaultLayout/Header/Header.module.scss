@@ -1,8 +1,9 @@
 .wrapper {
     --search-border-radius: 92px;
-    --search-height: 46px;
+    --search-height: 40px;
     --search-top-spacer: 9px;
     --search-button-width: 52px;
+    height: 68px;
     position: relative;
     min-width: 1230px;
 }
@@ -12,9 +13,10 @@
 // align-items: center;
 // justify-content: center;
 // }
+
 .logo-iuh {
-    width: 155px;
-    height: 65px;
+    width: 150px;
+    height: 62px;
 }
 .user-avatar {
     border-radius: 50%;

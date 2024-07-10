@@ -1,9 +1,9 @@
-import Header_Content from '~/Layout/Header_Content';
+import HeaderContent from '~/Layout/HeaderContent';
 
 function BangAnhXa() {
     return (
         <div>
-            <Header_Content name="Bang anh xa" />
+            <HeaderContent name={'Bang anh xa'} />
         </div>
     );
 }
