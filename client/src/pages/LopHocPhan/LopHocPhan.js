@@ -6,11 +6,12 @@ import { useState } from 'react';
 //component
 import HeaderContent from '~/Layout/HeaderContent';
 import Course from '~/components/Course';
-import { render } from '@testing-library/react';
+import ChiTietLopHocPhan from './ChiTietLopHocPhan';
 
 function LopHocPhan() {
     const cx = classNames.bind(styles);
     const [courses, setCourses] = useState([]);
+
     const handleOnClick = () => {
         courses[courses.length] = <Course />;
         setCourses((prev) => {

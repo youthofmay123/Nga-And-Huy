@@ -1,1 +1,1 @@
-export { default } from './Header_Content';
+export { default } from './HeaderContent';

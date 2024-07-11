@@ -1,0 +1,53 @@
+.wrapper {
+    display: block;
+}
+.wrapper-table {
+    height: 630px;
+    position: relative;
+    overflow: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.custom-table {
+    background-color: var(--white);
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.custom-table thead.header {
+    background-color: #e7ebeb;
+    font-size: 1.4rem;
+    // position: absolute;
+}
+
+.custom-table th,
+.custom-table td {
+    height: 50px;
+    padding: 10px 0 10px 20px;
+    vertical-align: middle;
+}
+//
+.custom-table td:nth-child(1) {
+    width: 15%; /* Độ rộng cột STT % */
+}
+
+.custom-table td:nth-child(2) {
+    width: 15%; /* Độ rộng cột MSSV / MSGV */
+}
+.custom-table td:nth-child(3) {
+    width: 25%; /* Độ rộng cột Họ và Tên */
+}
+
+.edit-btn {
+    cursor: pointer;
+    color: #918f8f;
+    width: 15px;
+    height: 15px;
+    &:hover {
+        color: var(--primary);
+    }
+}

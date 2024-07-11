@@ -3,14 +3,12 @@
     position: relative;
 }
 .list-group {
-    left: 5px;
     width: 200px;
     margin-top: 28px;
 }
 .list {
-    width: 240px;
+    width: 100%;
     margin-top: 8px;
-    margin-left: 8px;
 }
 
 .list-group-item-action {
@@ -22,21 +20,21 @@
     border: none;
     color: var(--text-color);
     transition: background-color ease-in-out 200ms;
+    &:focus::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: -12px;
+        width: 4px;
+        height: 100%;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        background-color: var(--primary);
+    }
 
     &:hover {
         background-color: var(--primary);
         color: var(--white);
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: -12px;
-            width: 4px;
-            height: 100%;
-            border-top-right-radius: 3px;
-            border-bottom-right-radius: 3px;
-            background-color: var(--primary);
-        }
     }
 }
 .selected {
@@ -51,6 +49,7 @@
 
 .active {
     border-top: 1px solid #e8e8e8;
+    width: 100%;
     position: absolute;
     bottom: 20px;
 }

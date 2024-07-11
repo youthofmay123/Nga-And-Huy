@@ -8,6 +8,7 @@ import GiangVien from '~/pages/GiangVien';
 import LopHocPhan from '~/pages/LopHocPhan';
 import ChuanDauRa from '~/pages/ChuanDauRa';
 import BoMon from '~/pages/BoMon';
+import ChiTietLopHocPhan from '~/pages/LopHocPhan/ChiTietLopHocPhan';
 
 //public routes
 const publicRoutes = [
@@ -20,6 +21,7 @@ const publicRoutes = [
     { path: config.routes.lophocphan, component: LopHocPhan },
     { path: config.routes.chuandaura, component: ChuanDauRa },
     { path: config.routes.bomon, component: BoMon },
+    { path: config.routes.chitiethocphan, component: ChiTietLopHocPhan },
 ];
 
 const privateRoutes = [];

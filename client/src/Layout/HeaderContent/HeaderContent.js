@@ -1,19 +1,76 @@
 //libs
-import styles from './Header.module.scss';
+import styles from './HeaderContent.module.scss';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileImport, faFilter, faPlus, faRotateLeft } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
+
 //component
 import Button from '~/components/Button';
 
-const cx = classNames.bind(styles);
-function Header_Content({ name, state1, state2, state3, btnAdd, btnImport, onClickWhenAdd, onClickWhenImport }) {
+function HeaderContent({
+    name,
+    state1,
+    state2,
+    state3,
+    btnAdd,
+    btnImport,
+    onClickWhenAdd,
+    onClickWhenImport,
+    listStudentResultBtn,
+    parentCallback,
+}) {
+    const cx = classNames.bind(styles);
+
+    const [selectionBtnList, setSelectionBtnList] = useState(true);
+    const [selectionBtnResult, setSelectionBtnResult] = useState(false);
+
+    const sendChoose = () => {
+        parentCallback(selectionBtnList);
+    };
+
+    const handleBtnList = () => {
+        setSelectionBtnList(true);
+        setSelectionBtnResult(false);
+        sendChoose();
+    };
+
+    const handleBtnResult = () => {
+        setSelectionBtnResult(true);
+        setSelectionBtnList(false);
+        sendChoose();
+    };
+
     return (
         <div className={cx('header')}>
             <h1 className={cx('name-page')}>
                 <strong>{name}</strong>
             </h1>
+            {listStudentResultBtn && (
+                <div className={cx('listStudent_result_btn')}>
+                    <Button
+                        className={cx('listStudent_btn')}
+                        onClick={handleBtnList}
+                        style={{
+                            backgroundColor: selectionBtnList ? 'var(--primary)' : 'var(--white)',
+                            color: selectionBtnList ? 'var(--white)' : 'var(--primary)',
+                        }}
+                    >
+                        <strong>DANH SÁCH SINH VIÊN</strong>
+                    </Button>
+                    <Button
+                        className={cx('result_btn')}
+                        onClick={handleBtnResult}
+                        style={{
+                            backgroundColor: selectionBtnResult ? 'var(--primary)' : 'var(--white)',
+                            color: selectionBtnResult ? 'var(--white)' : 'var(--primary)',
+                        }}
+                    >
+                        <strong>KẾT QUẢ ĐÁNH GIÁ</strong>
+                    </Button>
+                </div>
+            )}
             <div className={cx('container', 'mt-3')}>
                 <div className={cx('filter-section')}>
                     <div className={cx('icon-filter')}>
@@ -51,7 +108,7 @@ function Header_Content({ name, state1, state2, state3, btnAdd, btnImport, onCli
                 <div className={cx('action')}>
                     {btnAdd && (
                         <Button primary small leftIcon={<FontAwesomeIcon icon={faPlus} />} onClick={onClickWhenAdd}>
-                            THÊM
+                            <strong>THÊM</strong>
                         </Button>
                     )}
                     {btnImport && (
@@ -61,7 +118,7 @@ function Header_Content({ name, state1, state2, state3, btnAdd, btnImport, onCli
                             leftIcon={<FontAwesomeIcon icon={faFileImport} />}
                             onClick={onClickWhenImport}
                         >
-                            IMPORT
+                            <strong>IMPORT</strong>
                         </Button>
                     )}
                 </div>
@@ -69,7 +126,7 @@ function Header_Content({ name, state1, state2, state3, btnAdd, btnImport, onCli
         </div>
     );
 }
-Header_Content.protoTypes = {
+HeaderContent.protoTypes = {
     name: PropTypes.string.isRequired,
     state1: PropTypes.string,
     state2: PropTypes.string,
@@ -77,4 +134,4 @@ Header_Content.protoTypes = {
     btnAdd: PropTypes.node,
     btnImport: PropTypes.node,
 };
-export default Header_Content;
+export default HeaderContent;

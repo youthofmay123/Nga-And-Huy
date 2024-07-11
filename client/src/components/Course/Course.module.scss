@@ -6,7 +6,6 @@
     margin: 13px 40px;
     border-radius: 5px;
     background-color: var(--white);
-    cursor: pointer;
 }
 .card-body {
     padding: 8px;
@@ -19,6 +18,9 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.course-name {
+    cursor: pointer;
 }
 .class-name {
     margin: 7px;

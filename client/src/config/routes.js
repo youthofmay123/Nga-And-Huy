@@ -8,5 +8,6 @@ const routes = {
     lophocphan: '/lophocphan',
     chuandaura: '/chuandaura',
     bomon: '/bomon',
+    chitiethocphan: '/lophocphan/chitiethocphan',
 };
 export default routes;

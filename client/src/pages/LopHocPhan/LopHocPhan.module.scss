@@ -1,10 +1,14 @@
 .courses {
     display: flex;
     justify-content: flex-start;
-    height: 510px;
-    overflow-y: auto;
+    max-height: calc(var(--default-layout-height) - var(--default-header-content-height));
 }
 .container {
-    margin: 10px;
+    overflow-y: scroll;
+    margin: 0;
+
     // height: 510px;
+}
+.row {
+    flex-wrap: wrap;
 }
