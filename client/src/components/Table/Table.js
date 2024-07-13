@@ -2,15 +2,22 @@
 import classNames from 'classnames/bind';
 import styles from './Table.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
+
 //component
 import { faPencil } from '@fortawesome/free-solid-svg-icons';
-import From from '~/components/Form';
+import FromThongTinSinhVien from '~/components/Form/FormThongTinSinhVien/FormThongTinSinhVien';
+import FormKetQuaDanhGia from '../Form/FormKetQuaDanhGia';
 
-function Table({ states, valueStudent, rootValue }) {
+function Table({ states, valueStudent, edit, formThongTinSinhVien, formKetQuaDanhGia }) {
     const cx = classNames.bind(styles);
+    const [showModal, setShowModal] = useState(false);
 
-    const editStudent = () => {
-        <From />;
+    const handleOpenModal = () => {
+        setShowModal(true);
+    };
+    const handleCloseModal = () => {
+        setShowModal(false);
     };
 
     return (
@@ -37,13 +44,21 @@ function Table({ states, valueStudent, rootValue }) {
                                     <td key={key}>{value}</td>
                                 ))}
                                 <td>
-                                    <FontAwesomeIcon className={cx('edit-btn')} icon={faPencil} />
+                                    {edit && (
+                                        <FontAwesomeIcon
+                                            className={cx('edit-btn')}
+                                            icon={faPencil}
+                                            onClick={handleOpenModal}
+                                        />
+                                    )}
                                 </td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
             </div>
+            {(formThongTinSinhVien && <FromThongTinSinhVien show={showModal} handleClose={handleCloseModal} />) ||
+                (formKetQuaDanhGia && <FormKetQuaDanhGia show={showModal} handleClose={handleCloseModal} />)}
         </div>
     );
 }

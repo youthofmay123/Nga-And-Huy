@@ -14,10 +14,6 @@
     user-select: none;
     transition: background-color ease-in-out 200ms;
 
-    + .wrapper {
-        margin-left: 8px;
-    }
-
     //Disable
 
     &.disabled {

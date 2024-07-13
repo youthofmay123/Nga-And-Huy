@@ -18,7 +18,7 @@ function ChiTietLopHocPhan() {
     const data = [
         {
             mssv: '21128101',
-            hoTen: 'Nguyễn Lê Nhật Huy',
+            hoTen: 'Nguyễn Thị Nga',
             ngaySinh: '20/09/2003',
             lopDanhNghia: 'DHKTPM17B',
             clo1: 4,
@@ -29,7 +29,7 @@ function ChiTietLopHocPhan() {
         },
         {
             mssv: '21128101',
-            hoTen: 'Nguyễn Lê Nhật Huy',
+            hoTen: 'Nguyễn Thị Nga',
             ngaySinh: '20/09/2003',
             lopDanhNghia: 'DHKTPM17B',
             clo1: 4,
@@ -40,19 +40,7 @@ function ChiTietLopHocPhan() {
         },
         {
             mssv: '21128101',
-            hoTen: 'Nguyễn Lê Nhật Huy',
-            ngaySinh: '20/09/2003',
-            lopDanhNghia: 'DHKTPM17B',
-            clo1: 4,
-            clo2: 4,
-            clo3: 4,
-            clo4: 4,
-            trangThai: 'Còn học',
-        },
-
-        {
-            mssv: '21128101',
-            hoTen: 'Nguyễn Lê Nhật Huy',
+            hoTen: 'Nguyễn Thị Nga',
             ngaySinh: '20/09/2003',
             lopDanhNghia: 'DHKTPM17B',
             clo1: 4,
@@ -64,7 +52,7 @@ function ChiTietLopHocPhan() {
 
         {
             mssv: '21128101',
-            hoTen: 'Nguyễn Lê Nhật Huy',
+            hoTen: 'Nguyễn Thị Nga',
             ngaySinh: '20/09/2003',
             lopDanhNghia: 'DHKTPM17B',
             clo1: 4,
@@ -76,7 +64,7 @@ function ChiTietLopHocPhan() {
 
         {
             mssv: '21128101',
-            hoTen: 'Nguyễn Lê Nhật Huy',
+            hoTen: 'Nguyễn Thị Nga',
             ngaySinh: '20/09/2003',
             lopDanhNghia: 'DHKTPM17B',
             clo1: 4,
@@ -88,18 +76,7 @@ function ChiTietLopHocPhan() {
 
         {
             mssv: '21128101',
-            hoTen: 'Nguyễn Lê Nhật Huy',
-            ngaySinh: '20/09/2003',
-            lopDanhNghia: 'DHKTPM17B',
-            clo1: 4,
-            clo2: 4,
-            clo3: 4,
-            clo4: 4,
-            trangThai: 'Còn học',
-        },
-        {
-            mssv: '21128101',
-            hoTen: 'Nguyễn Lê Nhật Huy',
+            hoTen: 'Nguyễn Thị Nga',
             ngaySinh: '20/09/2003',
             lopDanhNghia: 'DHKTPM17B',
             clo1: 4,
@@ -111,7 +88,7 @@ function ChiTietLopHocPhan() {
 
         {
             mssv: '21128101',
-            hoTen: 'Nguyễn Lê Nhật Huy',
+            hoTen: 'Nguyễn Thị Nga',
             ngaySinh: '20/09/2003',
             lopDanhNghia: 'DHKTPM17B',
             clo1: 4,
@@ -122,7 +99,7 @@ function ChiTietLopHocPhan() {
         },
         {
             mssv: '21128101',
-            hoTen: 'Nguyễn Lê Nhật Huy',
+            hoTen: 'Nguyễn Thị Nga',
             ngaySinh: '20/09/2003',
             lopDanhNghia: 'DHKTPM17B',
             clo1: 4,
@@ -134,7 +111,7 @@ function ChiTietLopHocPhan() {
 
         {
             mssv: '21128101',
-            hoTen: 'Nguyễn Lê Nhật Huy',
+            hoTen: 'Nguyễn Thị Nga',
             ngaySinh: '20/09/2003',
             lopDanhNghia: 'DHKTPM17B',
             clo1: 4,
@@ -145,7 +122,19 @@ function ChiTietLopHocPhan() {
         },
         {
             mssv: '21128101',
-            hoTen: 'Nguyễn Lê Nhật Huy',
+            hoTen: 'Nguyễn Thị Nga',
+            ngaySinh: '20/09/2003',
+            lopDanhNghia: 'DHKTPM17B',
+            clo1: 4,
+            clo2: 4,
+            clo3: 4,
+            clo4: 4,
+            trangThai: 'Còn học',
+        },
+
+        {
+            mssv: '21128101',
+            hoTen: 'Nguyễn Thị Nga',
             ngaySinh: '20/09/2003',
             lopDanhNghia: 'DHKTPM17B',
             clo1: 4,
@@ -156,7 +145,7 @@ function ChiTietLopHocPhan() {
         },
         {
             mssv: '21128101',
-            hoTen: 'Nguyễn Lê Nhật Huy',
+            hoTen: 'Nguyễn Thị Nga',
             ngaySinh: '20/09/2003',
             lopDanhNghia: 'DHKTPM17B',
             clo1: 4,
@@ -167,7 +156,18 @@ function ChiTietLopHocPhan() {
         },
         {
             mssv: '21128101',
-            hoTen: 'Nguyễn Lê Nhật Huy',
+            hoTen: 'Nguyễn Thị Nga',
+            ngaySinh: '20/09/2003',
+            lopDanhNghia: 'DHKTPM17B',
+            clo1: 4,
+            clo2: 4,
+            clo3: 4,
+            clo4: 4,
+            trangThai: 'Còn học',
+        },
+        {
+            mssv: '21128101',
+            hoTen: 'Nguyễn Thị Nga',
             ngaySinh: '20/09/2003',
             lopDanhNghia: 'DHKTPM17B',
             clo1: 4,

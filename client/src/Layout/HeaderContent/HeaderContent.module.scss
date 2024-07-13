@@ -5,7 +5,7 @@
 .name-page {
     padding: 15px 0 15px 32px;
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 800;
 }
 .listStudent_result_btn {
     display: flex;
@@ -24,14 +24,15 @@
         color: var(--white);
         background-color: var(--primary);
     }
-    &.result_btn {
-        margin-left: 0;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-    }
+
     &.listStudent_btn {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
+    }
+    &.result_btn {
+        margin-left: 0px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
     }
 }
 
@@ -81,4 +82,7 @@
     right: 90px;
     top: 50%;
     transform: translateY(-50%);
+}
+.import-btn {
+    margin-left: 8px;
 }

@@ -26,7 +26,7 @@ function KetQuaDanhGia({ data }) {
 
     return (
         <div className={cx('wrapper')}>
-            <Table states={stateTable} valueStudent={valueTable} />
+            <Table states={stateTable} valueStudent={valueTable} formKetQuaDanhGia edit />
         </div>
     );
 }

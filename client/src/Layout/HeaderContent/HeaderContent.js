@@ -44,9 +44,7 @@ function HeaderContent({
 
     return (
         <div className={cx('header')}>
-            <h1 className={cx('name-page')}>
-                <strong>{name}</strong>
-            </h1>
+            <h1 className={cx('name-page')}>{name}</h1>
             {listStudentResultBtn && (
                 <div className={cx('listStudent_result_btn')}>
                     <Button
@@ -117,6 +115,7 @@ function HeaderContent({
                             small
                             leftIcon={<FontAwesomeIcon icon={faFileImport} />}
                             onClick={onClickWhenImport}
+                            className={cx('import-btn')}
                         >
                             <strong>IMPORT</strong>
                         </Button>

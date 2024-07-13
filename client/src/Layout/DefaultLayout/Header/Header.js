@@ -9,6 +9,7 @@ import config from '~/config';
 //componet
 import Search from '~/components/Search';
 import Image from '~/components/Image';
+import Menu from '~/components/Popper/Menu';
 
 function Header() {
     const cx = classNames.bind(styles);
@@ -37,23 +38,38 @@ function Header() {
                                     aria-expanded="false"
                                     style={{ display: 'flex', alignItems: 'center' }}
                                 >
-                                    <div className={cx('active')}>
-                                        <Image src={avatar} alt="" className={cx('user-avatar')} />
-                                        <div className={cx('name-role')}>
-                                            <strong className={cx('name')}>Huy Nguyễn</strong>
-                                            <p className={cx('role')}>Giảng viên</p>
+                                    <Menu
+                                        items={[
+                                            {
+                                                title: 'Thông tin cá nhân',
+                                            },
+
+                                            {
+                                                title: 'Đổi mật khẩu',
+                                            },
+                                            {
+                                                title: 'Đăng Xuất',
+                                            },
+                                        ]}
+                                    >
+                                        <div className={cx('active')}>
+                                            <Image src={avatar} alt="" className={cx('user-avatar')} />
+                                            <div className={cx('name-role')}>
+                                                <strong className={cx('name')}>Huy Nguyễn</strong>
+                                                <p className={cx('role')}>Giảng viên</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </Menu>
                                 </Link>
-                                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <Link className="dropdown-item" to="#">
-                                        Đăng xuất
-                                    </Link>
-                                    <div className="dropdown-divider"></div>
-                                    <Link className="dropdown-item" to="#">
-                                        Đổi mật khẩu
-                                    </Link>
-                                </div>
+                                {/* <div className="dropdown-menu" aria-labelledby="navbarDropdown"> */}
+                                {/* <Link className="dropdown-item" to="#"> */}
+                                {/* Đăng xuất */}
+                                {/* </Link> */}
+                                {/* <div className="dropdown-divider"></div> */}
+                                {/* <Link className="dropdown-item" to="#"> */}
+                                {/* Đổi mật khẩu */}
+                                {/* </Link> */}
+                                {/* </div> */}
                             </li>
                         </ul>
                     </div>

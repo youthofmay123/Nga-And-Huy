@@ -20,21 +20,21 @@
     border: none;
     color: var(--text-color);
     transition: background-color ease-in-out 200ms;
-    &:focus::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: -12px;
-        width: 4px;
-        height: 100%;
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
-        background-color: var(--primary);
-    }
 
     &:hover {
         background-color: var(--primary);
         color: var(--white);
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -12px;
+            width: 4px;
+            height: 100%;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            background-color: var(--primary);
+        }
     }
 }
 .selected {
@@ -45,6 +45,7 @@
     margin-right: 15px;
     width: 16px;
     height: 16px;
+    // color: var(--icon-color);
 }
 
 .active {

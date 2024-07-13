@@ -58,7 +58,7 @@ function Menu({ children, items = [], onChange = defaultFn, hideOnClick = false 
             interactive
             delay={[0, 700]}
             offset={[12, 8]}
-            placement="bottom-end"
+            placement="bottom-start"
             hideOnClick={hideOnClick}
             render={renderResult}
             onHide={handleResetMenu}

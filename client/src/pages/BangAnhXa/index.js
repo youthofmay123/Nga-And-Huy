@@ -1,4 +1,3 @@
-import Form from '~/components/Form';
 import HeaderContent from '~/Layout/HeaderContent';
 
 function BangAnhXa() {

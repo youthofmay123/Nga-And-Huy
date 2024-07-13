@@ -7,7 +7,6 @@ import styles from './Search.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import { useDebounce } from '~/hook';
 
-import * as searchServices from '~/services/searchServices';
 import { Wrapper as PropperWrapper } from '~/components/Popper';
 import AccountItem from '~/Layout/AccountItem';
 
