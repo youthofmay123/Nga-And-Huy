@@ -1,5 +1,5 @@
 .form {
-    position: absolute;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 950px;
@@ -8,9 +8,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     background-color: var(--white);
-    margin-left: 50%;
-    margin-top: 80px;
-    transform: translateX(-50%);
+    margin: 80px auto auto -150px;
 }
 
 .content {

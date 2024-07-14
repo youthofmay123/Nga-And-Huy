@@ -2,7 +2,6 @@
 import classNames from 'classnames/bind';
 import styles from './Table.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from 'react';
 
 //component
 import { faPencil } from '@fortawesome/free-solid-svg-icons';
@@ -11,14 +10,6 @@ import FormKetQuaDanhGia from '../Form/FormKetQuaDanhGia';
 
 function Table({ states, valueStudent, edit, formThongTinSinhVien, formKetQuaDanhGia }) {
     const cx = classNames.bind(styles);
-    const [showModal, setShowModal] = useState(false);
-
-    const handleOpenModal = () => {
-        setShowModal(true);
-    };
-    const handleCloseModal = () => {
-        setShowModal(false);
-    };
 
     return (
         <div className={cx('wrapper')}>
@@ -48,7 +39,8 @@ function Table({ states, valueStudent, edit, formThongTinSinhVien, formKetQuaDan
                                         <FontAwesomeIcon
                                             className={cx('edit-btn')}
                                             icon={faPencil}
-                                            onClick={handleOpenModal}
+                                            data-toggle="modal"
+                                            data-target="#exampleModal"
                                         />
                                     )}
                                 </td>
@@ -57,8 +49,7 @@ function Table({ states, valueStudent, edit, formThongTinSinhVien, formKetQuaDan
                     </tbody>
                 </table>
             </div>
-            {(formThongTinSinhVien && <FromThongTinSinhVien show={showModal} handleClose={handleCloseModal} />) ||
-                (formKetQuaDanhGia && <FormKetQuaDanhGia show={showModal} handleClose={handleCloseModal} />)}
+            {(formThongTinSinhVien && <FromThongTinSinhVien />) || (formKetQuaDanhGia && <FormKetQuaDanhGia />)}
         </div>
     );
 }

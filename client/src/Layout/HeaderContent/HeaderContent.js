@@ -69,6 +69,7 @@ function HeaderContent({
                     </Button>
                 </div>
             )}
+
             <div className={cx('container', 'mt-3')}>
                 <div className={cx('filter-section')}>
                     <div className={cx('icon-filter')}>
@@ -105,7 +106,14 @@ function HeaderContent({
                 </div>
                 <div className={cx('action')}>
                     {btnAdd && (
-                        <Button primary small leftIcon={<FontAwesomeIcon icon={faPlus} />} onClick={onClickWhenAdd}>
+                        <Button
+                            primary
+                            small
+                            leftIcon={<FontAwesomeIcon icon={faPlus} />}
+                            onClick={onClickWhenAdd}
+                            data-toggle="modal"
+                            data-target="#exampleModal"
+                        >
                             <strong>THÊM</strong>
                         </Button>
                     )}

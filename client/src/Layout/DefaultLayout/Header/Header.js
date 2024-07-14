@@ -28,9 +28,8 @@ function Header() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ml-auto">
                             <li className="nav-item dropdown">
-                                <Link
+                                <div
                                     className="nav-link dropdown-toggle"
-                                    to="#"
                                     id="navbarDropdown"
                                     role="button"
                                     data-toggle="dropdown"
@@ -60,16 +59,7 @@ function Header() {
                                             </div>
                                         </div>
                                     </Menu>
-                                </Link>
-                                {/* <div className="dropdown-menu" aria-labelledby="navbarDropdown"> */}
-                                {/* <Link className="dropdown-item" to="#"> */}
-                                {/* Đăng xuất */}
-                                {/* </Link> */}
-                                {/* <div className="dropdown-divider"></div> */}
-                                {/* <Link className="dropdown-item" to="#"> */}
-                                {/* Đổi mật khẩu */}
-                                {/* </Link> */}
-                                {/* </div> */}
+                                </div>
                             </li>
                         </ul>
                     </div>
