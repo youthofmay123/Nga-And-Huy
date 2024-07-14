@@ -7,13 +7,15 @@
     font-size: 2rem;
     font-weight: 800;
 }
-.listStudent_result_btn {
+.listStudent_result_btn,
+.listTeacher_result_btn {
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
     width: 100%;
 }
 .listStudent_btn,
+.listTeacher_btn,
 .result_btn {
     width: 47.5%;
     height: 40px;

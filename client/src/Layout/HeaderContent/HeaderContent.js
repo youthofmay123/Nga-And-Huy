@@ -19,6 +19,7 @@ function HeaderContent({
     onClickWhenAdd,
     onClickWhenImport,
     listStudentResultBtn,
+    listTeacherResultBtn,
     parentCallback,
 }) {
     const cx = classNames.bind(styles);
@@ -66,6 +67,30 @@ function HeaderContent({
                         }}
                     >
                         <strong>KẾT QUẢ ĐÁNH GIÁ</strong>
+                    </Button>
+                </div>
+            )}
+            {listTeacherResultBtn && (
+                <div className={cx('listTeacher_result_btn')}>
+                    <Button
+                        className={cx('listTeacher_btn')}
+                        onClick={handleBtnList}
+                        style={{
+                            backgroundColor: selectionBtnList ? 'var(--primary)' : 'var(--white)',
+                            color: selectionBtnList ? 'var(--white)' : 'var(--primary)',
+                        }}
+                    >
+                        <strong>DANH SÁCH GIẢNG VIÊN</strong>
+                    </Button>
+                    <Button
+                        className={cx('result_btn')}
+                        onClick={handleBtnResult}
+                        style={{
+                            backgroundColor: selectionBtnResult ? 'var(--primary)' : 'var(--white)',
+                            color: selectionBtnResult ? 'var(--white)' : 'var(--primary)',
+                        }}
+                    >
+                        <strong>BỘ MÔN</strong>
                     </Button>
                 </div>
             )}

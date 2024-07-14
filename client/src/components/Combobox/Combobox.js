@@ -15,7 +15,7 @@ function Combobox({ title, isRequire, small = false }) {
                 })}
             >
                 <span className={cx('title')}>
-                    {title}
+                    <strong>{title}</strong>
                     {isRequire && <span className={cx('isRequired')}>*</span>}
                 </span>
 

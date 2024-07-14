@@ -9,20 +9,21 @@ import Combobox from '~/components/Combobox';
 
 const FromThongTinSinhVien = () => {
     const cx = classNames.bind(styles);
+
     return (
         <div
-            class="modal fade"
+            className={cx('modal', 'fade')}
             id="exampleModal"
-            tabindex="-1"
+            tabIndex="-1"
             role="dialog"
             aria-labelledby="exampleModalLabel"
             aria-hidden="true"
         >
-            <div class="modal-dialog" role="document" style={{ justifyContent: 'center' }}>
+            <div className={cx('modal-dialog')} role="document" style={{ justifyContent: 'center' }}>
                 <div
                     className={cx('form', 'modal-body', 'modal-content', 'modal-content-custom')}
                     id="exampleModal"
-                    tabindex="-1"
+                    tabIndex="-1"
                     role="dialog"
                     aria-labelledby="exampleModalCenterTitle"
                     aria-hidden="true"

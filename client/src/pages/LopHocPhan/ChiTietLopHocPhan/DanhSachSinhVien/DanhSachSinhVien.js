@@ -26,7 +26,7 @@ function DanhSachSinhVien({ data }) {
     const valueTable = filterArrayByKeys(data, DataDSSV);
     return (
         <div className={cx('wrapper')}>
-            <Table states={stateTable} valueStudent={valueTable} formThongTinSinhVien edit />
+            <Table states={stateTable} valueData={valueTable} formThongTinSinhVien edit />
         </div>
     );
 }

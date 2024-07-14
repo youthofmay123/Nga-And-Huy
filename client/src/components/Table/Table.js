@@ -7,8 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPencil } from '@fortawesome/free-solid-svg-icons';
 import FromThongTinSinhVien from '~/components/Form/FormThongTinSinhVien/FormThongTinSinhVien';
 import FormKetQuaDanhGia from '../Form/FormKetQuaDanhGia';
+import FormThongTinGiangVien from '../Form/FormThongTinGiangVien';
 
-function Table({ states, valueStudent, edit, formThongTinSinhVien, formKetQuaDanhGia }) {
+function Table({ states, valueData, edit, formThongTinSinhVien, formKetQuaDanhGia, formThongTinGiangVien }) {
     const cx = classNames.bind(styles);
 
     return (
@@ -26,30 +27,36 @@ function Table({ states, valueStudent, edit, formThongTinSinhVien, formKetQuaDan
                             ))}
                         </tr>
                     </thead>
-                    <tbody className={cx('body')}>
-                        {valueStudent.map((student, index) => (
-                            <tr key={index}>
-                                <th scope="row">{index.toString().padStart(4, '0')}</th>
+                    {valueData ? (
+                        <tbody className={cx('body')}>
+                            {valueData.map((student, index) => (
+                                <tr key={index}>
+                                    <th scope="row">{index.toString().padStart(4, '0')}</th>
 
-                                {Object.entries(student).map(([key, value]) => (
-                                    <td key={key}>{value}</td>
-                                ))}
-                                <td>
-                                    {edit && (
-                                        <FontAwesomeIcon
-                                            className={cx('edit-btn')}
-                                            icon={faPencil}
-                                            data-toggle="modal"
-                                            data-target="#exampleModal"
-                                        />
-                                    )}
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
+                                    {Object.entries(student).map(([key, value]) => (
+                                        <td key={key}>{value}</td>
+                                    ))}
+                                    <td>
+                                        {edit && (
+                                            <FontAwesomeIcon
+                                                className={cx('edit-btn')}
+                                                icon={faPencil}
+                                                data-toggle="modal"
+                                                data-target="#exampleModal"
+                                            />
+                                        )}
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    ) : (
+                        <div className={cx('no-data')}>KHÔNG CÓ DỮ LIỆU</div>
+                    )}
                 </table>
             </div>
-            {(formThongTinSinhVien && <FromThongTinSinhVien />) || (formKetQuaDanhGia && <FormKetQuaDanhGia />)}
+            {(formThongTinSinhVien && <FromThongTinSinhVien />) ||
+                (formKetQuaDanhGia && <FormKetQuaDanhGia />) ||
+                (formThongTinGiangVien && <FormThongTinGiangVien />)}
         </div>
     );
 }

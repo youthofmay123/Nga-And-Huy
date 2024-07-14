@@ -1,0 +1,112 @@
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 760px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: var(--white);
+    margin: 80px auto auto -150px;
+}
+
+.content {
+    position: relative;
+    width: 850px;
+    height: 650px;
+}
+.close-modal {
+    width: 25px;
+    background-color: rgba(210, 210, 215, 0.34);
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    font-weight: 700;
+    right: 0;
+    &:hover {
+        background-color: red;
+        color: var(--white);
+    }
+}
+.title {
+    text-align: center;
+    color: var(--primary);
+    font-size: 2.2rem;
+    font-weight: 800;
+    padding: 20px 10px 10px 10px;
+}
+.info {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+.action {
+    position: absolute;
+    align-items: center;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .confirm-btn {
+        font-size: 1.6rem;
+        font-weight: 700;
+        padding: 20px;
+        width: 200px;
+    }
+}
+
+.avatar {
+    padding-bottom: 80px;
+    text-align: center;
+    position: relative;
+
+    .format-input {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: #ececee;
+    }
+
+    input {
+        opacity: 0;
+
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: transparent;
+    }
+}
+.camera-icon {
+    color: #7c7777;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.avatar-value {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+.title-avatar,
+.clear-avatar {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--primary);
+}
