@@ -18,7 +18,7 @@ function Header() {
         <header className={cx('wrapper')}>
             <nav className="navbar navbar-expand-lg ">
                 {/* Logo */}
-                <Link to={config.home} className={cx('logo')}>
+                <Link to={config.routes.home} className={cx('logo')}>
                     <img className={cx('logo-iuh')} src={Logo_IUH} alt="logo iuh" />
                 </Link>
                 {/* search */}

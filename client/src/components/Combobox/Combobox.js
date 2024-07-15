@@ -4,7 +4,7 @@ import styles from './Compobox.module.scss';
 
 //components
 
-function Combobox({ title, isRequire, small = false }) {
+function Combobox({ title, isRequire, small = false, red = false, orange = false, green = false, blue = false }) {
     const cx = classNames.bind(styles);
 
     return (
@@ -12,10 +12,14 @@ function Combobox({ title, isRequire, small = false }) {
             <div
                 className={cx('select', {
                     small,
+                    red,
+                    orange,
+                    green,
+                    blue,
                 })}
             >
                 <span className={cx('title')}>
-                    <strong>{title}</strong>
+                    <strong className={cx('text-title')}>{title}</strong>
                     {isRequire && <span className={cx('isRequired')}>*</span>}
                 </span>
 

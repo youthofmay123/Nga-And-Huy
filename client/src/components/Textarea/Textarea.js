@@ -1,13 +1,13 @@
 //libs
 import classNames from 'classnames/bind';
-import styles from './Input.module.scss';
+import styles from './Textarea.module.scss';
 import { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 
 //components
 
-function Input({ title, isRequire, small = false, large = false, darkGreen = false, placeholder = 'Tự phát sinh' }) {
+function Input({ title, isRequire, small = false, placeholder = 'Tự phát sinh' }) {
     const cx = classNames.bind(styles);
     const [inputValue, setInputValue] = useState('');
     const inputRef = useRef();
@@ -29,16 +29,14 @@ function Input({ title, isRequire, small = false, large = false, darkGreen = fal
             <div
                 className={cx('input', {
                     small,
-                    large,
-                    darkGreen,
                 })}
             >
                 <span className={cx('title')}>
-                    <strong className={cx('text-title')}>{title}</strong>
+                    <strong>{title}</strong>
                     {isRequire && <span className={cx('isRequired')}>*</span>}
                 </span>
 
-                <input
+                <textarea
                     value={inputValue}
                     spellCheck="false"
                     onChange={handleChange}

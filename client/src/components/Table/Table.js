@@ -4,12 +4,22 @@ import styles from './Table.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 //component
-import { faPencil } from '@fortawesome/free-solid-svg-icons';
+import { faPencil, faPlus } from '@fortawesome/free-solid-svg-icons';
 import FromThongTinSinhVien from '~/components/Form/FormThongTinSinhVien/FormThongTinSinhVien';
 import FormKetQuaDanhGia from '../Form/FormKetQuaDanhGia';
 import FormThongTinGiangVien from '../Form/FormThongTinGiangVien';
+import FormCLOsRubric from '../Form/FormCLOsRubrics';
 
-function Table({ states, valueData, edit, formThongTinSinhVien, formKetQuaDanhGia, formThongTinGiangVien }) {
+function Table({
+    states,
+    valueData,
+    add,
+    edit,
+    formThongTinSinhVien,
+    formKetQuaDanhGia,
+    formThongTinGiangVien,
+    formCLOsRubrics,
+}) {
     const cx = classNames.bind(styles);
 
     return (
@@ -31,12 +41,21 @@ function Table({ states, valueData, edit, formThongTinSinhVien, formKetQuaDanhGi
                         <tbody className={cx('body')}>
                             {valueData.map((student, index) => (
                                 <tr key={index}>
-                                    <th scope="row">{index.toString().padStart(4, '0')}</th>
+                                    <th scope="row">{(index + 1).toString().padStart(4, '0')}</th>
 
                                     {Object.entries(student).map(([key, value]) => (
                                         <td key={key}>{value}</td>
                                     ))}
                                     <td>
+                                        {add && (
+                                            <FontAwesomeIcon
+                                                className={cx('add-btn')}
+                                                icon={faPlus}
+                                                data-toggle="modal"
+                                                data-target="#exampleModal"
+                                            />
+                                        )}
+
                                         {edit && (
                                             <FontAwesomeIcon
                                                 className={cx('edit-btn')}
@@ -56,7 +75,8 @@ function Table({ states, valueData, edit, formThongTinSinhVien, formKetQuaDanhGi
             </div>
             {(formThongTinSinhVien && <FromThongTinSinhVien />) ||
                 (formKetQuaDanhGia && <FormKetQuaDanhGia />) ||
-                (formThongTinGiangVien && <FormThongTinGiangVien />)}
+                (formThongTinGiangVien && <FormThongTinGiangVien />) ||
+                (formCLOsRubrics && <FormCLOsRubric />)}
         </div>
     );
 }
