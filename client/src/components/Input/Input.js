@@ -7,7 +7,16 @@ import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 
 //components
 
-function Input({ title, isRequire, small = false, large = false, darkGreen = false, placeholder = 'Tự phát sinh' }) {
+function Input({
+    title,
+    isRequire,
+    small = false,
+    large = false,
+    login = false,
+    password = false,
+    darkGreen = false,
+    placeholder = 'Tự phát sinh',
+}) {
     const cx = classNames.bind(styles);
     const [inputValue, setInputValue] = useState('');
     const inputRef = useRef();
@@ -31,6 +40,7 @@ function Input({ title, isRequire, small = false, large = false, darkGreen = fal
                     small,
                     large,
                     darkGreen,
+                    login,
                 })}
             >
                 <span className={cx('title')}>
@@ -44,6 +54,7 @@ function Input({ title, isRequire, small = false, large = false, darkGreen = fal
                     onChange={handleChange}
                     ref={inputRef}
                     placeholder={placeholder}
+                    type={password ? 'password' : 'text'}
                 />
                 {!!inputValue && (
                     <button className={cx('clear')} onClick={handleClear}>

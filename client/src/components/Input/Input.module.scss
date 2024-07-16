@@ -1,5 +1,5 @@
 .wrapper {
-    padding: 25px 10px;
+    padding: 20px 10px 25px 10px;
 }
 
 .input {
@@ -55,5 +55,15 @@
 .darkGreen {
     .text-title {
         color: var(--dark-green);
+    }
+}
+.login {
+    &.input {
+        height: 58px;
+    }
+    input {
+        height: 100%;
+        background-color: #f1f4f9;
+        font-size: 2rem;
     }
 }

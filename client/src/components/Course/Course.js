@@ -2,7 +2,6 @@
 import classNames from 'classnames/bind';
 import styles from './Course.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import config from '~/config';

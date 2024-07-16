@@ -46,14 +46,18 @@ function TableCLO({ states, valueData, add, edit, formCLOs }) {
                                             cursor: 'pointer',
                                         }}
                                     >
-                                        <th scope="row" onClick={() => toggleRow(course.id)}>
+                                        <th scope="row" onClick={() => toggleRow(!expandedRow ? course.id : null)}>
                                             {course.id.toString().padStart(4, '0')}
                                         </th>
-                                        <td onClick={() => toggleRow(course.id)}>{course.maMonHoc}</td>
-                                        <td onClick={() => toggleRow(course.id)}>
+                                        <td onClick={() => toggleRow(!expandedRow ? course.id : null)}>
+                                            {course.maMonHoc}
+                                        </td>
+                                        <td onClick={() => toggleRow(!expandedRow ? course.id : null)}>
                                             {course.tenMonHoc} <br />({course.tenTiengAnh})
                                         </td>
-                                        <td onClick={() => toggleRow(course.id)}>{course.chuThich}</td>
+                                        <td onClick={() => toggleRow(!expandedRow ? course.id : null)}>
+                                            {course.chuThich}
+                                        </td>
                                         <td>
                                             {add && (
                                                 <FontAwesomeIcon

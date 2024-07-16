@@ -1,0 +1,85 @@
+.wrapper {
+    width: 1500px;
+    height: 880px;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    width: 630px;
+    height: 734px;
+    background-color: var(--white);
+    border-radius: 20px;
+    justify-content: center;
+    padding-right: 10px;
+}
+.title,
+.guide {
+    text-align: center;
+}
+.title {
+    padding: 50px 0 10px 0;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+.guide {
+    font-size: 1.6rem;
+}
+
+.title-id,
+.title-password {
+    margin-left: 10px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.account {
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.account-id,
+.password {
+    width: 100%;
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.password {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.forgot-password {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #8e8f91;
+    cursor: pointer;
+}
+.remember-password {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    input {
+        width: 28px;
+        height: 28px;
+        border: 1px solid #d2d5da;
+        margin-right: 10px;
+    }
+}
+.action {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    .custom-btn {
+        width: 230px;
+        height: 45px;
+        font-size: 2rem;
+        &:hover {
+            text-decoration: none;
+            color: var(--white);
+        }
+    }
+}

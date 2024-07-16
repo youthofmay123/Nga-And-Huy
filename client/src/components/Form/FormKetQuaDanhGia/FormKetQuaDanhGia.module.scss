@@ -28,7 +28,7 @@
     font-weight: 700;
     right: 0;
     &:hover {
-        background-color: red;
+        background-color: var(--red);
         color: var(--white);
     }
 }

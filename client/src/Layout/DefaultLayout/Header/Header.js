@@ -10,6 +10,9 @@ import config from '~/config';
 import Search from '~/components/Search';
 import Image from '~/components/Image';
 import Menu from '~/components/Popper/Menu';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { faArrowRightFromBracket, faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
     const cx = classNames.bind(styles);
@@ -40,13 +43,16 @@ function Header() {
                                     <Menu
                                         items={[
                                             {
+                                                icon: <FontAwesomeIcon icon={faUser} />,
                                                 title: 'Thông tin cá nhân',
                                             },
 
                                             {
+                                                icon: <FontAwesomeIcon icon={faLock} />,
                                                 title: 'Đổi mật khẩu',
                                             },
                                             {
+                                                icon: <FontAwesomeIcon icon={faArrowRightFromBracket} />,
                                                 title: 'Đăng Xuất',
                                             },
                                         ]}
