@@ -9,6 +9,8 @@ import FromThongTinSinhVien from '~/components/Form/FormThongTinSinhVien/FormTho
 import FormKetQuaDanhGia from '../Form/FormKetQuaDanhGia';
 import FormThongTinGiangVien from '../Form/FormThongTinGiangVien';
 import FormCLOsRubric from '../Form/FormCLOsRubrics';
+import FormELOs from '../Form/FormELOs/FormELOs';
+import FormPIs from '../Form/FormPIs';
 
 function Table({
     states,
@@ -19,6 +21,8 @@ function Table({
     formKetQuaDanhGia,
     formThongTinGiangVien,
     formCLOsRubrics,
+    formELOs,
+    formPIs,
 }) {
     const cx = classNames.bind(styles);
 
@@ -76,7 +80,8 @@ function Table({
             {(formThongTinSinhVien && <FromThongTinSinhVien />) ||
                 (formKetQuaDanhGia && <FormKetQuaDanhGia />) ||
                 (formThongTinGiangVien && <FormThongTinGiangVien />) ||
-                (formCLOsRubrics && <FormCLOsRubric />)}
+                (formCLOsRubrics && <FormCLOsRubric />) ||
+                (formPIs && <FormPIs />)}
         </div>
     );
 }
