@@ -24,7 +24,7 @@ import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
 
 function Sidebar({ parentCallback }) {
     const cx = classNames.bind(styles);
-    const [lighted, setLighted] = useState(true);
+    const [lighted, setLighted] = useState(false);
     const [close, setClose] = useState(false);
 
     return (

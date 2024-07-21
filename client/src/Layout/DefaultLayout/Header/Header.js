@@ -16,7 +16,9 @@ import { faArrowRightFromBracket, faLock, faUser } from '@fortawesome/free-solid
 
 function Header() {
     const cx = classNames.bind(styles);
-
+    const parentCallback = (children) => {
+        return children;
+    };
     return (
         <header className={cx('wrapper')}>
             <nav className={cx('navbar', 'custom-navbar')}>
@@ -43,6 +45,7 @@ function Header() {
                             title: 'Đăng Xuất',
                         },
                     ]}
+                    parentCallback={parentCallback}
                 >
                     <div className={cx('active')}>
                         <Image src={avatar} alt="" className={cx('user-avatar')} />

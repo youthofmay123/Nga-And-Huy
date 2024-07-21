@@ -8,7 +8,7 @@ import { useState } from 'react';
 const cx = classNames.bind(styles);
 
 function DefaultLayout({ children }) {
-    const [choose, setChoose] = useState(false);
+    const [choose, setChoose] = useState(true);
     const callbackFunction = (childChoose) => {
         setChoose(childChoose);
     };

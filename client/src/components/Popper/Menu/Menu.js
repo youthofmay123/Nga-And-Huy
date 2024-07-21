@@ -25,7 +25,7 @@ function Menu({ children, items = [], onChange = defaultFn, hideOnClick = false,
                     data={item}
                     onClick={() => {
                         parentCallback(item.title);
-                        // alert(item.title);
+                        alert(item.title);
                         if (isParent) {
                             setHistory((prev) => [...prev, item.children]);
                         } else {

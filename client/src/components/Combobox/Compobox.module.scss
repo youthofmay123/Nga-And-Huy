@@ -35,10 +35,11 @@
     background-color: var(--white);
     padding: 0 5px;
     font-size: 1.2rem;
+    border-radius: 10px;
 }
 .isRequired {
     margin-left: 5px;
-    color: red;
+    color: var(--red);
 }
 .small {
     width: 160px;

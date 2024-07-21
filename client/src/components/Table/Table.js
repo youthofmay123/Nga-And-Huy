@@ -10,7 +10,6 @@ import FormKetQuaDanhGia from '../Form/FormKetQuaDanhGia';
 import FormThongTinGiangVien from '../Form/FormThongTinGiangVien';
 import FormCLOsRubric from '../Form/FormCLOsRubrics';
 import FormThongTinBoMon from '../Form/FormThongTinBoMon';
-import FormELOs from '../Form/FormELOs/FormELOs';
 import FormPIs from '../Form/FormPIs';
 function Table({
     states,

@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 //components
 
-function Filter({ state1, state2, state3, valueState1, valueState2, valueState3 = [{}] }) {
+function Filter({ valueState1, valueState2, valueState3 = [{}] }) {
     const cx = classNames.bind(styles);
     const [data1, setData1] = useState(valueState1[0].title);
     const [data2, setData2] = useState(valueState2[0].title);

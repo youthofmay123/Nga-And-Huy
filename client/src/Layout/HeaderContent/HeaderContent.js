@@ -12,9 +12,6 @@ import Filter from '~/components/Filter';
 
 function HeaderContent({
     name,
-    state1,
-    state2,
-    state3,
     valueState1,
     valueState2,
     valueState3,
@@ -76,14 +73,7 @@ function HeaderContent({
             )}
 
             <div className={cx('container', 'mt-3')}>
-                <Filter
-                    state1={state1}
-                    state2={state2}
-                    state3={state3}
-                    valueState1={valueState1}
-                    valueState2={valueState2}
-                    valueState3={valueState3}
-                />
+                <Filter valueState1={valueState1} valueState2={valueState2} valueState3={valueState3} />
                 <div className={cx('action')}>
                     {btnAdd && (
                         <Button
