@@ -13,7 +13,7 @@ const FromThongTinSinhVien = () => {
     return (
         <div
             className={cx('modal', 'fade')}
-            id="exampleModal"
+            id="exampleModalDSSV"
             tabIndex="-1"
             role="dialog"
             aria-labelledby="exampleModalLabel"
@@ -22,7 +22,7 @@ const FromThongTinSinhVien = () => {
             <div className={cx('modal-dialog')} role="document" style={{ justifyContent: 'center' }}>
                 <div
                     className={cx('form', 'modal-body', 'modal-content', 'modal-content-custom')}
-                    id="exampleModal"
+                    id="exampleModalDSSV"
                     tabIndex="-1"
                     role="dialog"
                     aria-labelledby="exampleModalCenterTitle"
@@ -34,12 +34,12 @@ const FromThongTinSinhVien = () => {
                         </div>
                         <div className={cx('title')}>THÔNG TIN SINH VIÊN</div>
                         <div className={cx('info', 'row')}>
-                            <Input title="MSSV" isRequire />
-                            <Input title="Họ và tên" isRequire />
-                            <Input title="Ngày sinh" isRequire />
-                            <Input title="Lớp danh nghĩa" isRequire />
-                            <Combobox title="Giới tính" isRequire />
-                            <Combobox title="Trạng thái" isRequire />
+                            <Input title="MSSV" autoPading isRequire />
+                            <Input title="Họ và tên" autoPading isRequire />
+                            <Input title="Ngày sinh" autoPading isRequire />
+                            <Input title="Lớp danh nghĩa" autoPading isRequire />
+                            <Combobox title="Giới tính" autoPading isRequire />
+                            <Combobox title="Trạng thái" autoPading isRequire />
                         </div>
                         <div className={cx('action')}>
                             <Button primary className={cx('confirm-btn')} data-dismiss="modal" aria-label="Close">

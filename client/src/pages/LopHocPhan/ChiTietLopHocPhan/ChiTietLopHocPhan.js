@@ -11,6 +11,24 @@ import KetQuaDanhGia from './KetQuaDanhGia';
 function ChiTietLopHocPhan() {
     const cx = classNames.bind(styles);
     const [choose, setChoose] = useState(false);
+    const formIdModalDanhSachSV = '#exampleModalDSSV';
+    const formIdModalKetQuaDG = '#exampleModalKQDG';
+
+    const valueState1 = [
+        {
+            title: 'Mã lớp học phần',
+        },
+    ];
+    const valueState2 = [
+        {
+            title: 'Tên lớp học phần',
+        },
+    ];
+    const valueState3 = [
+        {
+            title: 'Trạng thái',
+        },
+    ];
 
     const callbackFunction = (childChoose) => {
         setChoose(childChoose);
@@ -182,13 +200,14 @@ function ChiTietLopHocPhan() {
         <div className={cx('wrapper')}>
             <HeaderContent
                 name="LẬP TRÌNH PHÂN TÁN VỚI CÔNG NGHỆ JAVA (420300214601)"
-                state1="Mã Lớp HP"
-                state2="Tên Lớp HP"
-                state3="Trạng thái"
+                valueState1={valueState1}
+                valueState2={valueState2}
+                valueState3={valueState3}
                 btnAdd
                 btnImport
                 listStudentResultBtn
                 parentCallback={callbackFunction}
+                formId={choose ? formIdModalKetQuaDG : formIdModalDanhSachSV}
             />
             {!choose ? <DanhSachSinhVien data={data} /> : <KetQuaDanhGia data={data} />}
         </div>

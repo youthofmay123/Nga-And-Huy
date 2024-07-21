@@ -101,6 +101,8 @@
     left: 50%;
     transform: translateX(-50%);
     border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 .title-avatar,
 .clear-avatar {

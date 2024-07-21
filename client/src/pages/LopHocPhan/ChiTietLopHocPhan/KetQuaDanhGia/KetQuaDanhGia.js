@@ -7,6 +7,7 @@ import Table from '~/components/Table';
 
 function KetQuaDanhGia({ data }) {
     const cx = classNames.bind(styles);
+    const formIdModalKetQuaDG = '#exampleModalKQDG';
     const filterArrayByKeys = (array, keys) => {
         return array.map((obj) => {
             let filteredObj = {};
@@ -26,7 +27,7 @@ function KetQuaDanhGia({ data }) {
 
     return (
         <div className={cx('wrapper')}>
-            <Table states={stateTable} valueData={valueTable} formKetQuaDanhGia edit />
+            <Table states={stateTable} valueData={valueTable} formKetQuaDanhGia edit formId={formIdModalKetQuaDG} />
         </div>
     );
 }

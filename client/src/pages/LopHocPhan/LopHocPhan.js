@@ -11,6 +11,21 @@ import ChiTietLopHocPhan from './ChiTietLopHocPhan';
 function LopHocPhan() {
     const cx = classNames.bind(styles);
     const [courses, setCourses] = useState([]);
+    const valueState1 = [
+        {
+            title: 'Mã lớp HP',
+        },
+    ];
+    const valueState2 = [
+        {
+            title: 'Tên lớp HP',
+        },
+    ];
+    const valueState3 = [
+        {
+            title: 'Trạng thái',
+        },
+    ];
 
     const handleOnClick = () => {
         courses[courses.length] = <Course />;
@@ -23,9 +38,9 @@ function LopHocPhan() {
         <div className={cx('wrapper')}>
             <HeaderContent
                 name="LỚP HỌC PHẦN"
-                state1="Mã lớp HP"
-                state2="Tên lớp HP"
-                state3="Trạng thái"
+                valueState1={valueState1}
+                valueState2={valueState2}
+                valueState3={valueState3}
                 btnImport
                 btnAdd
                 onClickWhenAdd={handleOnClick}

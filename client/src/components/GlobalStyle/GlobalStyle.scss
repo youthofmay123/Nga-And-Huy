@@ -2,25 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-:root {
-    --primary: #4880ff;
-    --black: #000;
-    --white: #fff;
-    --red: #ea0234;
-    --orange: #ff9a6c;
-    --green: #92e3a9;
-    --dark-green: #00b69b;
-    --text-color: #161823;
-    --icon-color: #667580;
-
-    //default layout
-    --default-layout-header-height: 60px;
-    --default-layout-width: 1270px;
-    --default-layout-height: 850px;
-    --default-layout-horizontal-spacer: 24px;
-    --default-header-content-height: 110px;
-}
-
 * {
     box-sizing: border-box;
     margin: 0;

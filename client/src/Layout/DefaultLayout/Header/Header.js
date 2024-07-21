@@ -19,7 +19,7 @@ function Header() {
 
     return (
         <header className={cx('wrapper')}>
-            <nav className="navbar navbar-expand-lg ">
+            <nav className={cx('navbar', 'custom-navbar')}>
                 {/* Logo */}
                 <Link to={config.routes.home} className={cx('logo')}>
                     <img className={cx('logo-iuh')} src={Logo_IUH} alt="logo iuh" />
@@ -27,49 +27,31 @@ function Header() {
                 {/* search */}
                 <Search />
 
-                <div className="container">
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav ml-auto">
-                            <li className="nav-item dropdown">
-                                <div
-                                    className="nav-link dropdown-toggle"
-                                    id="navbarDropdown"
-                                    role="button"
-                                    data-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
-                                    style={{ display: 'flex', alignItems: 'center' }}
-                                >
-                                    <Menu
-                                        items={[
-                                            {
-                                                icon: <FontAwesomeIcon icon={faUser} />,
-                                                title: 'Thông tin cá nhân',
-                                            },
+                <Menu
+                    items={[
+                        {
+                            icon: <FontAwesomeIcon icon={faUser} />,
+                            title: 'Thông tin cá nhân',
+                        },
 
-                                            {
-                                                icon: <FontAwesomeIcon icon={faLock} />,
-                                                title: 'Đổi mật khẩu',
-                                            },
-                                            {
-                                                icon: <FontAwesomeIcon icon={faArrowRightFromBracket} />,
-                                                title: 'Đăng Xuất',
-                                            },
-                                        ]}
-                                    >
-                                        <div className={cx('active')}>
-                                            <Image src={avatar} alt="" className={cx('user-avatar')} />
-                                            <div className={cx('name-role')}>
-                                                <strong className={cx('name')}>Huy Nguyễn</strong>
-                                                <p className={cx('role')}>Giảng viên</p>
-                                            </div>
-                                        </div>
-                                    </Menu>
-                                </div>
-                            </li>
-                        </ul>
+                        {
+                            icon: <FontAwesomeIcon icon={faLock} />,
+                            title: 'Đổi mật khẩu',
+                        },
+                        {
+                            icon: <FontAwesomeIcon icon={faArrowRightFromBracket} />,
+                            title: 'Đăng Xuất',
+                        },
+                    ]}
+                >
+                    <div className={cx('active')}>
+                        <Image src={avatar} alt="" className={cx('user-avatar')} />
+                        <div className={cx('name-role')}>
+                            <strong className={cx('name')}>Huy Nguyễn</strong>
+                            <p className={cx('role')}>Giảng viên</p>
+                        </div>
                     </div>
-                </div>
+                </Menu>
             </nav>
         </header>
     );

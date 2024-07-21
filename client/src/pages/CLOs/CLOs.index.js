@@ -8,7 +8,24 @@ import TableCLO from '~/components/Table/TableCLO';
 
 function CLOs() {
     const cx = classNames.bind(styles);
+    const formIdModalCLOs = '#exampleModalCLOs';
     const states = ['MÃ MÔN HỌC', 'TÊN MÔN HỌC', 'CHÚ THÍCH', ''];
+    const valueState1 = [
+        {
+            title: 'Môn học',
+        },
+    ];
+    const valueState2 = [
+        {
+            title: 'Order types',
+        },
+    ];
+    const valueState3 = [
+        {
+            title: 'Order status',
+        },
+    ];
+
     const data = [
         {
             id: 1,
@@ -276,9 +293,15 @@ function CLOs() {
 
     return (
         <div className={cx('wrapper')}>
-            <HeaderContent name="CLOs" state1="Môn học" state2="Order Type" state3="Order Status" />
+            <HeaderContent
+                name="CLOs"
+                valueState1={valueState1}
+                valueState2={valueState2}
+                valueState3={valueState3}
+                formId={formIdModalCLOs}
+            />
             <div className={cx('wrapper-table')}>
-                <TableCLO states={states} valueData={data} add edit formCLOs />
+                <TableCLO states={states} valueData={data} add edit formCLOs formId={formIdModalCLOs} />
             </div>
         </div>
     );

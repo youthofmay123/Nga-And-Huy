@@ -11,7 +11,7 @@ const FromThongTinSinhVien = () => {
     return (
         <div
             className={cx('modal', 'fade')}
-            id="exampleModal"
+            id="exampleModalKQDG"
             tabIndex="-1"
             role="dialog"
             aria-labelledby="exampleModalLabel"
@@ -20,7 +20,7 @@ const FromThongTinSinhVien = () => {
             <div className={cx('modal-dialog')} role="document" style={{ justifyContent: 'center' }}>
                 <div
                     className={cx('form', 'modal-body', 'modal-content', 'modal-content-custom')}
-                    id="exampleModal"
+                    id="exampleModalKQDG"
                     tabIndex="-1"
                     role="dialog"
                     aria-labelledby="exampleModalCenterTitle"
@@ -32,16 +32,16 @@ const FromThongTinSinhVien = () => {
                         </div>
                         <div className={cx('title')}>KẾT QUẢ ĐÁNH GIÁ</div>
                         <div className={cx('info', 'row')}>
-                            <Input title="MSSV" isRequire />
-                            <Input title="Họ và tên" isRequire />
-                            <Input title="CLO1" isRequire small />
-                            <Input title="CLO2" isRequire small />
-                            <Input title="CLO3" isRequire small />
-                            <Input title="CLO4" isRequire small />
-                            <Input title="CLO1" isRequire small />
-                            <Input title="CLO2" isRequire small />
-                            <Input title="CLO3" isRequire small />
-                            <Input title="CLO4" isRequire small />
+                            <Input title="MSSV" autoPading isRequire />
+                            <Input title="Họ và tên" autoPading isRequire />
+                            <Input title="CLO1" autoPading isRequire small />
+                            <Input title="CLO2" autoPading isRequire small />
+                            <Input title="CLO3" autoPading isRequire small />
+                            <Input title="CLO4" autoPading isRequire small />
+                            <Input title="CLO1" autoPading isRequire small />
+                            <Input title="CLO2" autoPading isRequire small />
+                            <Input title="CLO3" autoPading isRequire small />
+                            <Input title="CLO4" autoPading isRequire small />
                         </div>
                         <div className={cx('action')}>
                             <Button primary className={cx('confirm-btn')} data-dismiss="modal" aria-label="Close">

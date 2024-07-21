@@ -4,11 +4,24 @@ import styles from './Compobox.module.scss';
 
 //components
 
-function Combobox({ title, isRequire, small = false, red = false, orange = false, green = false, blue = false }) {
+function Combobox({
+    title,
+    isRequire,
+    small = false,
+    autoPading = false,
+    red = false,
+    orange = false,
+    green = false,
+    blue = false,
+}) {
     const cx = classNames.bind(styles);
 
     return (
-        <div className={cx('wrapper')}>
+        <div
+            className={cx('wrapper', {
+                autoPading,
+            })}
+        >
             <div
                 className={cx('select', {
                     small,

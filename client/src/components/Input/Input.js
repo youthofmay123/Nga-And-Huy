@@ -10,11 +10,16 @@ import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 function Input({
     title,
     isRequire,
+    autoPading = false,
     small = false,
     large = false,
     login = false,
     password = false,
     darkGreen = false,
+    red = false,
+    orange = false,
+    green = false,
+    blue = false,
     placeholder = 'Tự phát sinh',
 }) {
     const cx = classNames.bind(styles);
@@ -34,13 +39,22 @@ function Input({
     };
 
     return (
-        <div className={cx('wrapper')}>
+        <div
+            className={cx('wrapper', {
+                autoPading,
+            })}
+        >
             <div
                 className={cx('input', {
                     small,
+
                     large,
                     darkGreen,
                     login,
+                    red,
+                    orange,
+                    green,
+                    blue,
                 })}
             >
                 <span className={cx('title')}>

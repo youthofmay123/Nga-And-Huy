@@ -9,9 +9,9 @@ import React, { useState } from 'react';
 import Table from '~/components/Table';
 import FormCLOs from '~/components/Form/FormCLOs';
 
-function TableCLO({ states, valueData, add, edit, formCLOs }) {
+function TableCLO({ states, valueData, add, edit, formCLOs, formId }) {
     const cx = classNames.bind(styles);
-
+    const formIdModalCLO = '#exampleModalCLO';
     const childState = ['CLO', 'BLOOM LEVEL', 'PIS', 'ELOS', 'LEVEL', ''];
     ///
     const [expandedRow, setExpandedRow] = useState(null);
@@ -41,30 +41,26 @@ function TableCLO({ states, valueData, add, edit, formCLOs }) {
                             {valueData.map((course) => (
                                 <React.Fragment key={course.id}>
                                     <tr
-                                        className={expandedRow === course.id ? cx('highlighted') : cx('no-highligh')}
+                                        className={expandedRow === course.id ? cx('highlighted') : cx('no-highlight')}
                                         style={{
                                             cursor: 'pointer',
                                         }}
                                     >
-                                        <th scope="row" onClick={() => toggleRow(!expandedRow ? course.id : null)}>
+                                        <th scope="row" onClick={() => toggleRow(course.id)}>
                                             {course.id.toString().padStart(4, '0')}
                                         </th>
-                                        <td onClick={() => toggleRow(!expandedRow ? course.id : null)}>
-                                            {course.maMonHoc}
-                                        </td>
-                                        <td onClick={() => toggleRow(!expandedRow ? course.id : null)}>
+                                        <td onClick={() => toggleRow(course.id)}>{course.maMonHoc}</td>
+                                        <td onClick={() => toggleRow(course.id)}>
                                             {course.tenMonHoc} <br />({course.tenTiengAnh})
                                         </td>
-                                        <td onClick={() => toggleRow(!expandedRow ? course.id : null)}>
-                                            {course.chuThich}
-                                        </td>
+                                        <td onClick={() => toggleRow(course.id)}>{course.chuThich}</td>
                                         <td>
                                             {add && (
                                                 <FontAwesomeIcon
                                                     className={cx('add-btn')}
                                                     icon={faPlus}
                                                     data-toggle="modal"
-                                                    data-target="#exampleModalCLO"
+                                                    data-target={formId}
                                                 />
                                             )}
 
@@ -73,7 +69,7 @@ function TableCLO({ states, valueData, add, edit, formCLOs }) {
                                                     className={cx('edit-btn')}
                                                     icon={faPencil}
                                                     data-toggle="modal"
-                                                    data-target="#exampleModalCLO"
+                                                    data-target={formId}
                                                 />
                                             )}
                                         </td>
@@ -93,6 +89,7 @@ function TableCLO({ states, valueData, add, edit, formCLOs }) {
                                                     add
                                                     edit
                                                     formCLOsRubrics
+                                                    formId={formIdModalCLO}
                                                 />
                                             </td>
                                         </tr>
@@ -101,7 +98,13 @@ function TableCLO({ states, valueData, add, edit, formCLOs }) {
                             ))}
                         </tbody>
                     ) : (
-                        <div className={cx('no-data')}>KHÔNG CÓ DỮ LIỆU</div>
+                        <tbody>
+                            <tr>
+                                <td colSpan="6" className={cx('no-data')}>
+                                    KHÔNG CÓ DỮ LIỆU
+                                </td>
+                            </tr>
+                        </tbody>
                     )}
                 </table>
             </div>

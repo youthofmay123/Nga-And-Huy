@@ -8,6 +8,7 @@ import Table from '~/components/Table';
 function DanhSachSinhVien({ data }) {
     const cx = classNames.bind(styles);
     const stateTable = ['MSSV', 'HỌ VÀ TÊN', 'NGÀY SINH', 'LỚP DANH NGHĨA', 'TRẠNG THÁI', ''];
+    const formIdModalDanhSachSV = '#exampleModalDSSV';
 
     const filterArrayByKeys = (array, keys) => {
         return array.map((obj) => {
@@ -26,7 +27,13 @@ function DanhSachSinhVien({ data }) {
     const valueTable = filterArrayByKeys(data, DataDSSV);
     return (
         <div className={cx('wrapper')}>
-            <Table states={stateTable} valueData={valueTable} formThongTinSinhVien edit />
+            <Table
+                states={stateTable}
+                valueData={valueTable}
+                formThongTinSinhVien
+                edit
+                formId={formIdModalDanhSachSV}
+            />
         </div>
     );
 }

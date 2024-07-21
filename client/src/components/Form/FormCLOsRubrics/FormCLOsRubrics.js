@@ -12,7 +12,7 @@ function FormCLOsRubrics() {
     return (
         <div
             className={cx('modal', 'fade')}
-            id="exampleModal"
+            id="exampleModalCLO"
             tabIndex="-1"
             role="dialog"
             aria-labelledby="exampleModalLabel"
@@ -21,7 +21,7 @@ function FormCLOsRubrics() {
             <div className={cx('modal-dialog')} role="document" style={{ justifyContent: 'center' }}>
                 <div
                     className={cx('form', 'modal-body', 'modal-content', 'modal-content-custom')}
-                    id="exampleModal"
+                    id="exampleModalCLO"
                     tabIndex="-1"
                     role="dialog"
                     aria-labelledby="exampleModalCenterTitle"
@@ -35,13 +35,13 @@ function FormCLOsRubrics() {
                         <div className={cx('name-course')}>NHẬP MÔN LẬP TRÌNH</div>
                         <div className={cx('info', 'row')}>
                             <Input title="CLOs" isRequire large />
-                            <Combobox title="A-Failed" isRequire red />
+                            <Input title="A-Failed" isRequire red />
                             <Input title="%" isRequire small darkGreen />
-                            <Combobox title="B-Fair" isRequire orange />
+                            <Input title="B-Fair" isRequire orange />
                             <Input title="%" isRequire small darkGreen />
-                            <Combobox title="C-Accepted" isRequire green />
+                            <Input title="C-Accepted" isRequire green />
                             <Input title="%" isRequire small darkGreen />
-                            <Combobox title="D-Excellent" isRequire blue />
+                            <Input title="D-Excellent" isRequire blue />
                             <Input title="%" isRequire small darkGreen />
                         </div>
                         <div className={cx('action')}>

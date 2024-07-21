@@ -35,7 +35,7 @@ const FormThongTinGiangVien = () => {
     return (
         <div
             className={cx('modal', 'fade')}
-            id="exampleModal"
+            id="exampleModalGiangVien"
             tabIndex="-1"
             role="dialog"
             aria-labelledby="exampleModalLabel"
@@ -44,7 +44,7 @@ const FormThongTinGiangVien = () => {
             <div className={cx('modal-dialog')} role="document" style={{ justifyContent: 'center' }}>
                 <div
                     className={cx('form', 'modal-body', 'modal-content', 'modal-content-custom')}
-                    id="exampleModal"
+                    id="exampleModalGiangVien"
                     tabIndex="-1"
                     role="dialog"
                     aria-labelledby="exampleModalCenterTitle"
@@ -74,14 +74,14 @@ const FormThongTinGiangVien = () => {
                             )}
                         </div>
                         <div className={cx('info', 'row')}>
-                            <Input title="Mã giảng viên" isRequire />
-                            <Input title="Họ và tên" isRequire />
-                            <Input title="Ngày sinh" isRequire />
-                            <Input title="Số điện thoại" isRequire />
-                            <Input title="Email" isRequire />
-                            <Combobox title="Thuộc bộ môn" isRequire />
-                            <Combobox title="Chức vụ" isRequire />
-                            <Combobox title="Trạng thái" isRequire />
+                            <Input title="Mã giảng viên" autoPading isRequire />
+                            <Input title="Họ và tên" autoPading isRequire />
+                            <Input title="Ngày sinh" autoPading isRequire />
+                            <Input title="Số điện thoại" autoPading isRequire />
+                            <Input title="Email" autoPading isRequire />
+                            <Combobox title="Thuộc bộ môn" autoPading isRequire />
+                            <Combobox title="Chức vụ" autoPading isRequire />
+                            <Combobox title="Trạng thái" autoPading isRequire />
                         </div>
                         <div className={cx('action')}>
                             <Button primary className={cx('confirm-btn')} data-dismiss="modal" aria-label="Close">

@@ -13,7 +13,7 @@ function FormCLOs() {
     return (
         <div
             className={cx('modal', 'fade')}
-            id="exampleModalCLO"
+            id="exampleModalCLOs"
             tabIndex="-1"
             role="dialog"
             aria-labelledby="exampleModalLabel"
@@ -22,7 +22,7 @@ function FormCLOs() {
             <div className={cx('modal-dialog')} role="document" style={{ justifyContent: 'center' }}>
                 <div
                     className={cx('form', 'modal-body', 'modal-content', 'modal-content-custom')}
-                    id="exampleModal"
+                    id="exampleModalCLOs"
                     tabIndex="-1"
                     role="dialog"
                     aria-labelledby="exampleModalCenterTitle"

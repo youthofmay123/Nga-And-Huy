@@ -1,5 +1,6 @@
 .header {
     padding: 10px 0;
+    color: var(--text-color);
     // height: var(--default-header-content-height);
 }
 .name-page {
@@ -42,28 +43,13 @@
     display: flex;
     position: relative;
     margin-left: 32px;
+    min-height: 48px;
 }
 .form-group {
     display: flex;
 }
 .filter-section {
     display: flex;
-}
-.form-control,
-.title-filter,
-.reset-filter,
-.icon-filter {
-    border: solid 1px #d5d5d5;
-    color: var(--text-color);
-    background-color: #f9f9fb;
-    padding: 10px;
-    width: 130px;
-    min-height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 1.2rem;
 }
 
 .icon-filter {
@@ -72,7 +58,7 @@
     border-bottom-left-radius: 8px;
 }
 .reset-filter {
-    color: #ea0234;
+    color: var(--red);
     .icon-reset {
         margin-right: 8px;
     }

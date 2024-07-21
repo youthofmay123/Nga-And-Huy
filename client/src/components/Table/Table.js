@@ -9,7 +9,9 @@ import FromThongTinSinhVien from '~/components/Form/FormThongTinSinhVien/FormTho
 import FormKetQuaDanhGia from '../Form/FormKetQuaDanhGia';
 import FormThongTinGiangVien from '../Form/FormThongTinGiangVien';
 import FormCLOsRubric from '../Form/FormCLOsRubrics';
-
+import FormThongTinBoMon from '../Form/FormThongTinBoMon';
+import FormELOs from '../Form/FormELOs/FormELOs';
+import FormPIs from '../Form/FormPIs';
 function Table({
     states,
     valueData,
@@ -19,6 +21,10 @@ function Table({
     formKetQuaDanhGia,
     formThongTinGiangVien,
     formCLOsRubrics,
+    formThongTinBoMon,
+    formELOs,
+    formPIs,
+    formId,
 }) {
     const cx = classNames.bind(styles);
 
@@ -52,7 +58,7 @@ function Table({
                                                 className={cx('add-btn')}
                                                 icon={faPlus}
                                                 data-toggle="modal"
-                                                data-target="#exampleModal"
+                                                data-target={formId}
                                             />
                                         )}
 
@@ -61,7 +67,7 @@ function Table({
                                                 className={cx('edit-btn')}
                                                 icon={faPencil}
                                                 data-toggle="modal"
-                                                data-target="#exampleModal"
+                                                data-target={formId}
                                             />
                                         )}
                                     </td>
@@ -69,14 +75,23 @@ function Table({
                             ))}
                         </tbody>
                     ) : (
-                        <div className={cx('no-data')}>KHÔNG CÓ DỮ LIỆU</div>
+                        <tbody>
+                            <tr>
+                                <td colSpan="6" className={cx('no-data')}>
+                                    KHÔNG CÓ DỮ LIỆU
+                                </td>
+                            </tr>
+                        </tbody>
                     )}
                 </table>
             </div>
             {(formThongTinSinhVien && <FromThongTinSinhVien />) ||
                 (formKetQuaDanhGia && <FormKetQuaDanhGia />) ||
                 (formThongTinGiangVien && <FormThongTinGiangVien />) ||
-                (formCLOsRubrics && <FormCLOsRubric />)}
+                (formCLOsRubrics && <FormCLOsRubric />) ||
+                (formThongTinBoMon && <FormThongTinBoMon />) ||
+                (formCLOsRubrics && <FormCLOsRubric />) ||
+                (formPIs && <FormPIs />)}
         </div>
     );
 }

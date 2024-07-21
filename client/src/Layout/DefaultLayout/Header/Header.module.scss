@@ -3,17 +3,14 @@
     --search-height: 40px;
     --search-top-spacer: 9px;
     --search-button-width: 52px;
-    height: 68px;
+    height: 70px;
     position: relative;
     min-width: 1230px;
+    color: var(--text-color);
 }
-// .logo {
-// width: 230px;
-// display: flex;
-// align-items: center;
-// justify-content: center;
-// }
-
+.custom-navbar {
+    padding: 0 10px;
+}
 .logo-iuh {
     width: 150px;
     height: 62px;
@@ -26,6 +23,7 @@
 }
 .active {
     display: flex;
+    margin-right: 10px;
 }
 .name,
 .role {

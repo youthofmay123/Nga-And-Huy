@@ -1,4 +1,8 @@
 .wrapper {
+    padding: 10px;
+}
+
+.autoPading {
     padding: 20px 10px 25px 10px;
 }
 
@@ -50,13 +54,36 @@
     width: 160px;
 }
 .large {
-    width: 540px;
+    width: 530px;
 }
 .darkGreen {
     .text-title {
         color: var(--dark-green);
     }
 }
+.red {
+    .text-title {
+        color: var(--red);
+    }
+}
+.orange {
+    .text-title {
+        color: var(--orange);
+    }
+}
+
+.green {
+    .text-title {
+        color: var(--green);
+    }
+}
+
+.blue {
+    .text-title {
+        color: var(--primary);
+    }
+}
+
 .login {
     &.input {
         height: 58px;
