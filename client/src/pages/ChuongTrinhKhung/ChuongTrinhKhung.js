@@ -19,9 +19,6 @@ function ChuongTrinhKhung() {
             title: 'Hệ thống thông tin',
         },
         {
-            title: 'Công nghệ thông tin',
-        },
-        {
             title: 'Khoa học máy tính',
         },
         {

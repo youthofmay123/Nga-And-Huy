@@ -84,14 +84,3 @@
         color: var(--primary);
     }
 }
-
-.login {
-    &.input {
-        height: 58px;
-    }
-    input {
-        height: 100%;
-        background-color: #f1f4f9;
-        font-size: 2rem;
-    }
-}

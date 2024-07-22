@@ -1,0 +1,15 @@
+.wrapper {
+    overflow: auto;
+    height: 100%;
+}
+.content-box {
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.content-results,
+.content-table {
+    margin: 10px 30px;
+    height: 300px;
+    background-color: var(--white);
+}

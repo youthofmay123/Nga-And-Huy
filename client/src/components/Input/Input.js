@@ -13,7 +13,6 @@ function Input({
     autoPading = false,
     small = false,
     large = false,
-    login = false,
     password = false,
     darkGreen = false,
     red = false,
@@ -47,10 +46,8 @@ function Input({
             <div
                 className={cx('input', {
                     small,
-
                     large,
                     darkGreen,
-                    login,
                     red,
                     orange,
                     green,

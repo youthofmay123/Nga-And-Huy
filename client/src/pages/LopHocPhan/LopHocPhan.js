@@ -6,11 +6,12 @@ import { useState } from 'react';
 //component
 import HeaderContent from '~/Layout/HeaderContent';
 import Course from '~/components/Course';
-import ChiTietLopHocPhan from './ChiTietLopHocPhan';
+import FormThongTinLopHocPhan from '~/components/Form/FormThongTinLopHocPhan';
 
 function LopHocPhan() {
     const cx = classNames.bind(styles);
     const [courses, setCourses] = useState([]);
+    const formIdModalLHP = '#exampleModalLHP';
     const valueState1 = [
         {
             title: 'Mã lớp HP',
@@ -29,9 +30,7 @@ function LopHocPhan() {
 
     const handleOnClick = () => {
         courses[courses.length] = <Course />;
-        setCourses((prev) => {
-            return [courses];
-        });
+        setCourses([courses]);
     };
 
     return (
@@ -44,10 +43,12 @@ function LopHocPhan() {
                 btnImport
                 btnAdd
                 onClickWhenAdd={handleOnClick}
+                formId={formIdModalLHP}
             />
             <div className={cx('container')}>
                 <div className={cx('courses', 'row')}>{courses.map((course, index) => course)}</div>
             </div>
+            <FormThongTinLopHocPhan />;
         </div>
     );
 }

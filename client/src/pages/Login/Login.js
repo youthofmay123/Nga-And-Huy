@@ -17,14 +17,14 @@ function Login() {
                 <div className={cx('account')}>
                     <div className={cx('account-id')}>
                         <div className={cx('title-id')}>ID</div>
-                        <Input large placeholder="Nhập mã giảng viên" login />
+                        <Input large placeholder="Nhập mã giảng viên" />
                     </div>
                     <div className={cx('account-password')}>
                         <div className={cx('password')}>
                             <div className={cx('title-password')}>Password</div>
                             <div className={cx('forgot-password')}>Forgot Password?</div>
                         </div>
-                        <Input large placeholder="" login password />
+                        <Input large placeholder="" password />
                     </div>
                     <div className={cx('remember-password')}>
                         <input type="checkbox" />
