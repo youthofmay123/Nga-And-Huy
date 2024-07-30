@@ -49,12 +49,9 @@ function TableBAX({ states, data }) {
                                 <td>{course.tenTiengViet}</td>
                                 <td>{course.tenTiengAnh}</td>
 
-                                {renderTableData(course, 'eloa', states[0].num.length)}
-                                {renderTableData(course, 'elob', states[1].num.length)}
-                                {renderTableData(course, 'eloc', states[2].num.length)}
-                                {renderTableData(course, 'elod', states[3].num.length)}
-                                {renderTableData(course, 'eloe', states[4].num.length)}
-                                {renderTableData(course, 'elof', states[5].num.length)}
+                                {states.map((state, indexState) =>
+                                    renderTableData(course, `elo${state.name}`, states[indexState].num.length),
+                                )}
 
                                 <td>{course.hocKy}</td>
                             </tr>

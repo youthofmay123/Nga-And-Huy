@@ -72,7 +72,7 @@ function HeaderContent({
                 </div>
             )}
 
-            <div className={cx('container', 'mt-3')}>
+            <div className={cx('container')}>
                 <Filter valueState1={valueState1} valueState2={valueState2} valueState3={valueState3} />
                 <div className={cx('action')}>
                     {btnAdd && (

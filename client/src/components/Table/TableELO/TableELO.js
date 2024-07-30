@@ -47,12 +47,12 @@ function TableELO({ states, valueData, add, edit, formELOs, formId }) {
                                             cursor: 'pointer',
                                         }}
                                     >
-                                        <th scope="row" onClick={() => toggleRow(!expandedRow ? elo.id : null)}>
+                                        <th scope="row" onClick={() => toggleRow(elo.id)}>
                                             {elo.id.toString().padStart(4, '0')}
                                         </th>
-                                        <td onClick={() => toggleRow(!expandedRow ? elo.id : null)}>{elo.ELOs}</td>
-                                        <td onClick={() => toggleRow(!expandedRow ? elo.id : null)}>{elo.moTa}</td>
-                                        <td onClick={() => toggleRow(!expandedRow ? elo.id : null)}>{elo.chuThich}</td>
+                                        <td onClick={() => toggleRow(elo.id)}>{elo.ELOs}</td>
+                                        <td onClick={() => toggleRow(elo.id)}>{elo.moTa}</td>
+                                        <td onClick={() => toggleRow(elo.id)}>{elo.chuThich}</td>
                                         <td>
                                             {add && (
                                                 <FontAwesomeIcon

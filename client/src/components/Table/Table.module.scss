@@ -1,11 +1,13 @@
 .wrapper {
     height: 100%;
     transition: all 500ms ease;
+    color: var(--text-color);
 }
 .wrapper-table {
     height: 100%;
     overflow: auto;
     border-radius: 10px;
+    border: 1px solid var(--box-shadow);
     background-color: transparent;
 }
 
@@ -16,23 +18,32 @@
 }
 
 .custom-table thead.header {
+    height: 50px;
+    vertical-align: middle;
+    text-align: start;
     background-color: var(--header-table);
     font-size: 1.4rem;
+    border: none;
+
+    th {
+        padding: 10px 0 10px 20px;
+    }
 }
 
-.custom-table th,
-.custom-table td {
+.custom-table tbody th,
+.custom-table tbody td {
     height: 50px;
     padding: 10px 0 10px 20px;
     vertical-align: middle;
 }
-.custom-table tr {
-    border-bottom: 1px solid var(--box-shadow);
+.custom-table tbody tr {
+    border-top: 1px solid var(--box-shadow);
+    background-color: var(--content-table);
 }
+
 .table thead {
     position: sticky;
     border-radius: 10px;
-    box-shadow: 0px 2px 4px var(--box-shadow);
     z-index: 1;
     top: 0px;
 }
@@ -69,16 +80,22 @@
 }
 .header-CLO,
 .header-CTK {
-    background-color: var(--header-table-custom);
+    height: 50px;
+    vertical-align: middle;
     color: var(--primary);
     font-size: 1.4rem;
+    background-color: var(--header-table-custom);
+
     tr {
         border-bottom: 2px solid var(--box-shadow);
+    }
+    td,
+    th {
+        padding: 10px 0 10px 20px;
     }
 }
 
 .child-form .custom-table thead.header {
-    background-color: var(--header-table-custom);
     color: var(--text-color-child-table);
     font-size: 1.2rem;
 }
@@ -87,23 +104,26 @@
 }
 .child-form .wrapper-table {
     border-radius: 0;
+    border: none;
 }
 .child-form .custom-table {
     border-radius: 0;
 }
 .highlighted {
-    background-color: var(--highlight-table);
+    background-color: var(--highlight-table) !important;
 }
 .no-highlight {
+    background-color: var(--highlight-table);
     &:hover {
         background-color: var(--highlight-table);
-        cursor: pointer;
     }
 }
-
-.child-form .custom-table th,
-.child-form .custom-table td {
-    border-bottom: 1px solid var(--white);
+.child-form .custom-table tr {
+    background-color: none;
+}
+.child-form .custom-table tbody th,
+.child-form .custom-table tbody td {
+    background-color: var(--highlight-table);
 }
 .child-form .table thead {
     z-index: 0;

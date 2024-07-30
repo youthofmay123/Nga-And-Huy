@@ -4,7 +4,7 @@
     // height: var(--default-header-content-height);
 }
 .name-page {
-    padding: 15px 0 15px 32px;
+    padding: 15px 0 15px 30px;
     font-size: 2rem;
     font-weight: 800;
 }
@@ -42,7 +42,7 @@
 .container {
     display: flex;
     position: relative;
-    margin-left: 32px;
+    padding: 0 30px;
     min-height: 48px;
 }
 .form-group {

@@ -37,7 +37,9 @@ function Combobox({
                 </span>
 
                 <select>
-                    <option>Tự phát sinh</option>
+                    <option>Tự phát sinh1</option>
+                    <option>Tự phát sinh2</option>
+                    <option>Tự phát sinh3</option>
                 </select>
             </div>
         </div>

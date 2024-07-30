@@ -255,7 +255,10 @@ function BangAnhXa() {
             tenTiengAnh: 'Discrete Structures',
             hocKy: 3,
             eloa: {
-                pi2: [2, 4, 5, 1, 3],
+                pi2: [2, 4, 5],
+            },
+            elob: {
+                pi2: [1, 3],
             },
         },
         {
