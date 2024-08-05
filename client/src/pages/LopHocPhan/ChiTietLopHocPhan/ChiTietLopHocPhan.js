@@ -2,14 +2,17 @@
 import classNames from 'classnames/bind';
 import styles from './ChiTietLopHocPhan.module.scss';
 import HeaderContent from '~/Layout/HeaderContent';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 //component
 import DanhSachSinhVien from './DanhSachSinhVien';
 import KetQuaDanhGia from './KetQuaDanhGia';
+import { useLocation } from 'react-router-dom';
 
 function ChiTietLopHocPhan() {
     const cx = classNames.bind(styles);
+    const location = useLocation();
+    const data = location.state || {};
     const [choose, setChoose] = useState(false);
     const formIdModalDanhSachSV = '#exampleModalDSSV';
     const formIdModalKetQuaDG = '#exampleModalKQDG';
@@ -33,7 +36,8 @@ function ChiTietLopHocPhan() {
     const callbackFunction = (childChoose) => {
         setChoose(childChoose);
     };
-    const data = [
+
+    const datas = [
         {
             mssv: '21128101',
             hoTen: 'Nguyễn Thị Nga',
@@ -199,7 +203,7 @@ function ChiTietLopHocPhan() {
     return (
         <div className={cx('wrapper')}>
             <HeaderContent
-                name="LẬP TRÌNH PHÂN TÁN VỚI CÔNG NGHỆ JAVA (420300214601)"
+                name={data.tenMonHoc}
                 valueState1={valueState1}
                 valueState2={valueState2}
                 valueState3={valueState3}
@@ -209,7 +213,7 @@ function ChiTietLopHocPhan() {
                 parentCallback={callbackFunction}
                 formId={choose ? formIdModalKetQuaDG : formIdModalDanhSachSV}
             />
-            {!choose ? <DanhSachSinhVien data={data} /> : <KetQuaDanhGia data={data} />}
+            {!choose ? <DanhSachSinhVien data={datas} /> : <KetQuaDanhGia data={datas} />}
         </div>
     );
 }

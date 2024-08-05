@@ -1,7 +1,7 @@
 //libs
 import classNames from 'classnames/bind';
 import styles from './LopHocPhan.module.scss';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 //component
 import HeaderContent from '~/Layout/HeaderContent';
@@ -11,6 +11,7 @@ import FormThongTinLopHocPhan from '~/components/Form/FormThongTinLopHocPhan';
 function LopHocPhan() {
     const cx = classNames.bind(styles);
     const [courses, setCourses] = useState([]);
+    const [data, setData] = useState([]);
     const formIdModalLHP = '#exampleModalLHP';
     const valueState1 = [
         {
@@ -28,10 +29,23 @@ function LopHocPhan() {
         },
     ];
 
-    const handleOnClick = () => {
-        courses[courses.length] = <Course />;
-        setCourses([courses]);
+    const handleOnClick = () => {};
+
+    const getData = async () => {
+        try {
+            let result = await fetch('http://localhost:4000/lophocphan');
+            const data = await result.json();
+
+            setData(data);
+            return data;
+        } catch (e) {
+            console.log(e);
+        }
     };
+
+    useEffect(() => {
+        getData(<Course data={data} />);
+    }, []);
 
     return (
         <div className={cx('wrapper')}>
@@ -46,9 +60,13 @@ function LopHocPhan() {
                 formId={formIdModalLHP}
             />
             <div className={cx('container')}>
-                <div className={cx('courses', 'row')}>{courses.map((course, index) => course)}</div>
+                <div className={cx('courses', 'row')}>
+                    {data.map((course, index) => (
+                        <Course data={course} key={index} />
+                    ))}
+                </div>
             </div>
-            <FormThongTinLopHocPhan />;
+            <FormThongTinLopHocPhan />
         </div>
     );
 }

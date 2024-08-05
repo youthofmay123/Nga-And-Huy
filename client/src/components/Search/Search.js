@@ -58,46 +58,44 @@ function Search() {
     return (
         // Using a wrapper <div> or <span> tag around the refecence element solves
         // This by creating a new parentNode context
-        <div>
-            <HeadlessTippy
-                interactive
-                visible={searchResult.length > 0 && showResult}
-                render={(attrs) => (
-                    <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-                        <PropperWrapper>
-                            <h4 className={cx('search-title')}>Accounts</h4>
-                            {searchResult.map((result) => (
-                                <AccountItem key={result.id} data={result} />
-                            ))}
-                        </PropperWrapper>
-                    </div>
-                )}
-                onClickOutside={handleHideResult}
-            >
-                <div className={cx('search')}>
-                    <input
-                        value={searchValue}
-                        placeholder="Tìm kiếm"
-                        spellCheck="false"
-                        onChange={handleChange}
-                        onFocus={() => setShowResult(true)}
-                        ref={inputRef}
-                    />
-                    {!!searchValue && !loading && (
-                        <button className={cx('clear')} onClick={handleClear}>
-                            {/* Clear */}
-                            <FontAwesomeIcon icon={faCircleXmark} />
-                        </button>
-                    )}
-                    {/* Loading */}
-                    {loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
-                    <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
-                        {/* Search */}
-                        <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    </button>
+        <HeadlessTippy
+            interactive
+            visible={searchResult.length > 0 && showResult}
+            render={(attrs) => (
+                <div className={cx('search-result')} tabIndex="-1" {...attrs}>
+                    <PropperWrapper>
+                        <h4 className={cx('search-title')}>Accounts</h4>
+                        {searchResult.map((result) => (
+                            <AccountItem key={result.id} data={result} />
+                        ))}
+                    </PropperWrapper>
                 </div>
-            </HeadlessTippy>
-        </div>
+            )}
+            onClickOutside={handleHideResult}
+        >
+            <div className={cx('search')}>
+                <input
+                    value={searchValue}
+                    placeholder="Tìm kiếm"
+                    spellCheck="false"
+                    onChange={handleChange}
+                    onFocus={() => setShowResult(true)}
+                    ref={inputRef}
+                />
+                {!!searchValue && !loading && (
+                    <button className={cx('clear')} onClick={handleClear}>
+                        {/* Clear */}
+                        <FontAwesomeIcon icon={faCircleXmark} />
+                    </button>
+                )}
+                {/* Loading */}
+                {loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
+                <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
+                    {/* Search */}
+                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                </button>
+            </div>
+        </HeadlessTippy>
     );
 }
 
