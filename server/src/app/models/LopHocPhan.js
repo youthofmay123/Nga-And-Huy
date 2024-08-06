@@ -10,6 +10,16 @@ const LopHocPhan = new Schema(
     tenLopHocPhan: { type: String, maxLenght: 600 },
     trangThai: { type: Boolean },
     slug: { type: String, slug: "tenMonHoc", unique: true },
+    danhSachSinhVien: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "sinhviens",
+      },
+    ],
+    maGiangVien: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "giangviens",
+    },
   },
   {
     timestamps: true,

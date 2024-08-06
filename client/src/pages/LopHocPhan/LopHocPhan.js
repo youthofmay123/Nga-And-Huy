@@ -10,7 +10,6 @@ import FormThongTinLopHocPhan from '~/components/Form/FormThongTinLopHocPhan';
 
 function LopHocPhan() {
     const cx = classNames.bind(styles);
-    const [courses, setCourses] = useState([]);
     const [data, setData] = useState([]);
     const formIdModalLHP = '#exampleModalLHP';
     const valueState1 = [
@@ -44,7 +43,7 @@ function LopHocPhan() {
     };
 
     useEffect(() => {
-        getData(<Course data={data} />);
+        getData();
     }, []);
 
     return (

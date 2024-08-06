@@ -3,12 +3,15 @@ import classNames from 'classnames/bind';
 import styles from './GiangVien.module.scss';
 import HeaderContent from '~/Layout/HeaderContent';
 import DanhSachGiangVien from './DanhSachGiangVien';
+import { useEffect, useState } from 'react';
 
 //components
 
 function GiangVien() {
     const cx = classNames.bind(styles);
     const formIdModalGiangVien = '#exampleModalGiangVien';
+    const [data, setData] = useState([]);
+
     const valueState1 = [
         {
             title: 'Bộ môn',
@@ -25,108 +28,21 @@ function GiangVien() {
         },
     ];
 
-    const data = [
-        {
-            maGiangVien: '21130791',
-            hoTen: 'TS.Nguyễn Thị Hạnh',
-            chucVu: 'Trưởng bộ môn',
-            email: 'ngthihanh@gmail.com',
-            trangThai: 'Còn dạy',
-        },
-        {
-            maGiangVien: '21130791',
-            hoTen: 'TS.Nguyễn Thị Hạnh',
-            chucVu: 'Trưởng bộ môn',
-            email: 'ngthihanh@gmail.com',
-            trangThai: 'Còn dạy',
-        },
+    const getData = async () => {
+        try {
+            let result = await fetch(`http://localhost:4000/giangvien/`);
+            const data = await result.json();
 
-        {
-            maGiangVien: '21130791',
-            hoTen: 'TS.Nguyễn Thị Hạnh',
-            chucVu: 'Trưởng bộ môn',
-            email: 'ngthihanh@gmail.com',
-            trangThai: 'Còn dạy',
-        },
+            setData(data);
+            return data;
+        } catch (e) {
+            console.log(e);
+        }
+    };
 
-        {
-            maGiangVien: '21130791',
-            hoTen: 'TS.Nguyễn Thị Hạnh',
-            chucVu: 'Trưởng bộ môn',
-            email: 'ngthihanh@gmail.com',
-            trangThai: 'Còn dạy',
-        },
-
-        {
-            maGiangVien: '21130791',
-            hoTen: 'TS.Nguyễn Thị Hạnh',
-            chucVu: 'Trưởng bộ môn',
-            email: 'ngthihanh@gmail.com',
-            trangThai: 'Còn dạy',
-        },
-        {
-            maGiangVien: '21130791',
-            hoTen: 'TS.Nguyễn Thị Hạnh',
-            chucVu: 'Trưởng bộ môn',
-            email: 'ngthihanh@gmail.com',
-            trangThai: 'Còn dạy',
-        },
-
-        {
-            maGiangVien: '21130791',
-            hoTen: 'TS.Nguyễn Thị Hạnh',
-            chucVu: 'Trưởng bộ môn',
-            email: 'ngthihanh@gmail.com',
-            trangThai: 'Còn dạy',
-        },
-
-        {
-            maGiangVien: '21130791',
-            hoTen: 'TS.Nguyễn Thị Hạnh',
-            chucVu: 'Trưởng bộ môn',
-            email: 'ngthihanh@gmail.com',
-            trangThai: 'Còn dạy',
-        },
-
-        {
-            maGiangVien: '21130791',
-            hoTen: 'TS.Nguyễn Thị Hạnh',
-            chucVu: 'Trưởng bộ môn',
-            email: 'ngthihanh@gmail.com',
-            trangThai: 'Còn dạy',
-        },
-        {
-            maGiangVien: '21130791',
-            hoTen: 'TS.Nguyễn Thị Hạnh',
-            chucVu: 'Trưởng bộ môn',
-            email: 'ngthihanh@gmail.com',
-            trangThai: 'Còn dạy',
-        },
-
-        {
-            maGiangVien: '21130791',
-            hoTen: 'TS.Nguyễn Thị Hạnh',
-            chucVu: 'Trưởng bộ môn',
-            email: 'ngthihanh@gmail.com',
-            trangThai: 'Còn dạy',
-        },
-
-        {
-            maGiangVien: '21130791',
-            hoTen: 'TS.Nguyễn Thị Hạnh',
-            chucVu: 'Trưởng bộ môn',
-            email: 'ngthihanh@gmail.com',
-            trangThai: 'Còn dạy',
-        },
-
-        {
-            maGiangVien: '21130791',
-            hoTen: 'TS.Nguyễn Thị Hạnh',
-            chucVu: 'Trưởng bộ môn',
-            email: 'ngthihanh@gmail.com',
-            trangThai: 'Còn dạy',
-        },
-    ];
+    useEffect(() => {
+        getData();
+    }, []);
 
     return (
         <div className={cx('wrapper')}>

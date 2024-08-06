@@ -9,5 +9,6 @@ const routes = {
     chuandaura: '/chuandaura',
     bomon: '/bomon',
     chitiethocphan: '/lophocphan/chitiethocphan',
+    chitiethocphanID: '/lophocphan/:id',
 };
 export default routes;

@@ -7,15 +7,22 @@ import { useEffect, useState } from 'react';
 //component
 import DanhSachSinhVien from './DanhSachSinhVien';
 import KetQuaDanhGia from './KetQuaDanhGia';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 
 function ChiTietLopHocPhan() {
+    const { id } = useParams();
+
     const cx = classNames.bind(styles);
     const location = useLocation();
     const data = location.state || {};
+    const [dataStudent, setDataStudent] = useState([]);
     const [choose, setChoose] = useState(false);
     const formIdModalDanhSachSV = '#exampleModalDSSV';
     const formIdModalKetQuaDG = '#exampleModalKQDG';
+
+    if (id.match(/[^\d]/)) {
+        return <div className={cx('error')}>404 Not Found</div>;
+    }
 
     const valueState1 = [
         {
@@ -37,158 +44,25 @@ function ChiTietLopHocPhan() {
         setChoose(childChoose);
     };
 
+    const getData = async () => {
+        try {
+            let result = await fetch(`http://localhost:4000/lophocphan/${id}`);
+            const dataStudent = await result.json();
+
+            setDataStudent(dataStudent);
+            return dataStudent;
+        } catch (e) {
+            console.log(e);
+        }
+    };
+
+    // useEffect(() => {
+    // getData();
+    // }, []);
+
     const datas = [
         {
-            mssv: '21128101',
-            hoTen: 'Nguyễn Thị Nga',
-            ngaySinh: '20/09/2003',
-            lopDanhNghia: 'DHKTPM17B',
-            clo1: 4,
-            clo2: 4,
-            clo3: 4,
-            clo4: 4,
-            trangThai: 'Còn học',
-        },
-        {
-            mssv: '21128101',
-            hoTen: 'Nguyễn Thị Nga',
-            ngaySinh: '20/09/2003',
-            lopDanhNghia: 'DHKTPM17B',
-            clo1: 4,
-            clo2: 4,
-            clo3: 4,
-            clo4: 4,
-            trangThai: 'Còn học',
-        },
-        {
-            mssv: '21128101',
-            hoTen: 'Nguyễn Thị Nga',
-            ngaySinh: '20/09/2003',
-            lopDanhNghia: 'DHKTPM17B',
-            clo1: 4,
-            clo2: 4,
-            clo3: 4,
-            clo4: 4,
-            trangThai: 'Còn học',
-        },
-
-        {
-            mssv: '21128101',
-            hoTen: 'Nguyễn Thị Nga',
-            ngaySinh: '20/09/2003',
-            lopDanhNghia: 'DHKTPM17B',
-            clo1: 4,
-            clo2: 4,
-            clo3: 4,
-            clo4: 4,
-            trangThai: 'Còn học',
-        },
-
-        {
-            mssv: '21128101',
-            hoTen: 'Nguyễn Thị Nga',
-            ngaySinh: '20/09/2003',
-            lopDanhNghia: 'DHKTPM17B',
-            clo1: 4,
-            clo2: 4,
-            clo3: 4,
-            clo4: 4,
-            trangThai: 'Còn học',
-        },
-
-        {
-            mssv: '21128101',
-            hoTen: 'Nguyễn Thị Nga',
-            ngaySinh: '20/09/2003',
-            lopDanhNghia: 'DHKTPM17B',
-            clo1: 4,
-            clo2: 4,
-            clo3: 4,
-            clo4: 4,
-            trangThai: 'Còn học',
-        },
-
-        {
-            mssv: '21128101',
-            hoTen: 'Nguyễn Thị Nga',
-            ngaySinh: '20/09/2003',
-            lopDanhNghia: 'DHKTPM17B',
-            clo1: 4,
-            clo2: 4,
-            clo3: 4,
-            clo4: 4,
-            trangThai: 'Còn học',
-        },
-        {
-            mssv: '21128101',
-            hoTen: 'Nguyễn Thị Nga',
-            ngaySinh: '20/09/2003',
-            lopDanhNghia: 'DHKTPM17B',
-            clo1: 4,
-            clo2: 4,
-            clo3: 4,
-            clo4: 4,
-            trangThai: 'Còn học',
-        },
-
-        {
-            mssv: '21128101',
-            hoTen: 'Nguyễn Thị Nga',
-            ngaySinh: '20/09/2003',
-            lopDanhNghia: 'DHKTPM17B',
-            clo1: 4,
-            clo2: 4,
-            clo3: 4,
-            clo4: 4,
-            trangThai: 'Còn học',
-        },
-        {
-            mssv: '21128101',
-            hoTen: 'Nguyễn Thị Nga',
-            ngaySinh: '20/09/2003',
-            lopDanhNghia: 'DHKTPM17B',
-            clo1: 4,
-            clo2: 4,
-            clo3: 4,
-            clo4: 4,
-            trangThai: 'Còn học',
-        },
-
-        {
-            mssv: '21128101',
-            hoTen: 'Nguyễn Thị Nga',
-            ngaySinh: '20/09/2003',
-            lopDanhNghia: 'DHKTPM17B',
-            clo1: 4,
-            clo2: 4,
-            clo3: 4,
-            clo4: 4,
-            trangThai: 'Còn học',
-        },
-        {
-            mssv: '21128101',
-            hoTen: 'Nguyễn Thị Nga',
-            ngaySinh: '20/09/2003',
-            lopDanhNghia: 'DHKTPM17B',
-            clo1: 4,
-            clo2: 4,
-            clo3: 4,
-            clo4: 4,
-            trangThai: 'Còn học',
-        },
-        {
-            mssv: '21128101',
-            hoTen: 'Nguyễn Thị Nga',
-            ngaySinh: '20/09/2003',
-            lopDanhNghia: 'DHKTPM17B',
-            clo1: 4,
-            clo2: 4,
-            clo3: 4,
-            clo4: 4,
-            trangThai: 'Còn học',
-        },
-        {
-            mssv: '21128101',
+            mssv: id,
             hoTen: 'Nguyễn Thị Nga',
             ngaySinh: '20/09/2003',
             lopDanhNghia: 'DHKTPM17B',
@@ -203,7 +77,7 @@ function ChiTietLopHocPhan() {
     return (
         <div className={cx('wrapper')}>
             <HeaderContent
-                name={data.tenMonHoc}
+                name={'LỚP HỌC PHẦN - ' + data.thongTinMonHoc.tenMonHocTiengViet + ' (' + data.maLopHocPhan + ')'}
                 valueState1={valueState1}
                 valueState2={valueState2}
                 valueState3={valueState3}
