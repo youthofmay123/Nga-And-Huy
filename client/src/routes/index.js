@@ -23,7 +23,8 @@ const publicRoutes = [
     { path: config.routes.lophocphan, component: LopHocPhan },
     { path: config.routes.chuandaura, component: ChuanDauRa },
     { path: config.routes.bomon, component: BoMon },
-    { path: config.routes.chitiethocphan, component: ChiTietLopHocPhan },
+    { path: config.routes.chitiethocphanID, component: ChiTietLopHocPhan },
+
     { path: config.routes.login, component: Login, layout: null },
 ];
 

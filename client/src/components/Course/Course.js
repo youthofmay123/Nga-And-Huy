@@ -10,22 +10,27 @@ import config from '~/config';
 import Image from '~/components/Image';
 import Frame01 from '~/IMG/Frame 1201.png';
 
-function Course() {
+function Course({ data }) {
     const cx = classNames.bind(styles);
     return (
-        <div className={cx('card')}>
-            <Image className={cx('card-img-top')} src={Frame01} alt="Card image cap" />
-            <div className={cx('card-body')}>
-                <Link to={config.routes.chitiethocphan} className={cx('course-name')}>
-                    <strong className={cx('full-name')}>Lập trình phân tán với công nghệ Java</strong>
-                    <div className={cx('course-id')}>(420300214601)</div>
-                </Link>
-                <div className={cx('class-name')}>
-                    <FontAwesomeIcon className={cx('icon')} icon={faUser} />
-                    DHKTPM17A
+        <Link
+            to={config.routes.chitiethocphanID.replace(':id', data.maLopHocPhan ?? 0)}
+            className={cx('course-name')}
+            state={data}
+            style={{ textDecoration: 'none' }}
+        >
+            <div className={cx('card')}>
+                <Image className={cx('card-img-top')} src={Frame01} alt="Card image cap" />
+                <div className={cx('card-body')}>
+                    <strong className={cx('full-name')}>{data.thongTinMonHoc.tenMonHocTiengViet}</strong>
+                    <div className={cx('course-id')}>({data.maLopHocPhan})</div>
+                    <div className={cx('class-name')}>
+                        <FontAwesomeIcon className={cx('icon')} icon={faUser} />
+                        {data.tenLopHocPhan}
+                    </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 }
 

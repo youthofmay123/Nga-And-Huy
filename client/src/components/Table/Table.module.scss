@@ -6,15 +6,15 @@
 .wrapper-table {
     height: 100%;
     overflow: auto;
-    border-radius: 10px;
-    border: 1px solid var(--box-shadow);
     background-color: transparent;
+    border-radius: 10px;
 }
 
 .custom-table {
     margin: 0;
     width: 100%;
     font-size: 1.4rem;
+    border-radius: 10px;
 }
 
 .custom-table thead.header {
@@ -23,8 +23,6 @@
     text-align: start;
     background-color: var(--header-table);
     font-size: 1.4rem;
-    border: none;
-
     th {
         padding: 10px 0 10px 20px;
     }
@@ -43,8 +41,7 @@
 
 .table thead {
     position: sticky;
-    border-radius: 10px;
-    z-index: 1;
+    z-index: 1000; /* Đảm bảo giá trị đủ cao */
     top: 0px;
 }
 

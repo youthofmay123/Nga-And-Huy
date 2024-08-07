@@ -1,0 +1,35 @@
+.card-class-item {
+  margin-top: 20px; }
+
+.logo_iuh {
+  width: 100px;
+  height: 40px; }
+
+.user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 4px; }
+
+.container {
+  max-width: 1100px; }
+
+.list-group {
+  background-color: #4880FF;
+  align-items: center;
+  width: 200px; }
+
+.list-group-item {
+  font-size: 12px;
+  width: 175px; }
+
+.list-group-item-action:hover {
+  color: #fff;
+  background-color: #4880FF; }
+
+.title {
+  margin-top: 5px; }
+
+.card-body-text {
+  font-size: 12px;
+  color: darkgrey; }
