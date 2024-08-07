@@ -48,7 +48,7 @@ function LopHocPhan() {
             <div className={cx('container')}>
                 <div className={cx('courses', 'row')}>{courses.map((course, index) => course)}</div>
             </div>
-            <FormThongTinLopHocPhan />;
+            <FormThongTinLopHocPhan />
         </div>
     );
 }
